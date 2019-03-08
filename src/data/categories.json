@@ -1,0 +1,24 @@
+{
+    "categories": [
+        {
+            "id": "pants",
+            "title": "Jeans & Pantalones"
+        },
+        {
+            "id": "shirts",
+            "title": "Camisas"
+        },
+        {
+            "id": "tshirts",
+            "title": "Remeras & Musculosas"
+        },
+        {
+            "id": "covert",
+            "title": "Abrigo"
+        },
+        {
+            "id": "swimsuits",
+            "title": "Shorts de baño"
+        }
+    ]
+}

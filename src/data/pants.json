@@ -1,0 +1,18 @@
+{
+    "products" : [
+        {
+            "name": "Un lompa",
+            "price": {
+                "now": 100.50,
+                "before": 200
+            },
+            "flags": {
+                "isNew": true
+            },
+            "pictures": [
+                "http://bestjquery.com/tutorial/product-grid/demo4/images/img-1.jpg",
+                "http://bestjquery.com/tutorial/product-grid/demo4/images/img-2.jpg"
+            ]
+        }
+    ]
+}

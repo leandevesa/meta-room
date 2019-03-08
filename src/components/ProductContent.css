@@ -1,0 +1,8 @@
+.price{color:#000;font-size:16px;letter-spacing:1px;font-weight:600;margin-right:2px;display:inline-block}
+.price span{color:#909090;font-size:14px;font-weight:500;letter-spacing:0;text-decoration:line-through;text-align:left;display:inline-block;margin-top:-2px}
+.title{font-size:14px;text-transform:capitalize;margin:0 0 7px;transition:all .3s ease 0s}
+.title a{color:#414141}
+.product-content{z-index:-1;padding:15px;text-align:left}
+.price-before {
+    margin-left: 12px;
+}

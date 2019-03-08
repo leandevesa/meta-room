@@ -1,0 +1,15 @@
+{
+    "products" : [
+        {
+            "name": "Una camisa",
+            "price": {
+                "now": 100.50,
+                "before": 200
+            },
+            "pictures": [
+                "http://bestjquery.com/tutorial/product-grid/demo4/images/img-1.jpg",
+                "http://bestjquery.com/tutorial/product-grid/demo4/images/img-2.jpg"
+            ]
+        }
+    ]
+}

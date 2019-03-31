@@ -8,10 +8,13 @@ interface ImageProps {
     url: string;
 }
 
-class ProductImage extends Component<ImageProps> {
+class ProductImage extends Component<ImageProps, any> {
 
     constructor(props: ImageProps) {
         super(props);
+        this.state = {
+            pictures: [this.props.pictures.pop()]
+        };
     }
 
     render() {
@@ -25,6 +28,13 @@ class ProductImage extends Component<ImageProps> {
         );
     }
 
+    onMouseOver = () => {
+        if (this.props.pictures.length) {
+            this.state.pictures.push(this.props.pictures.pop());
+            this.setState({pictures: this.state.pictures});
+        }
+    }
+
     renderFlags = () => {
         if (this.props.flags) {
             if (this.props.flags.isNew)
@@ -35,8 +45,12 @@ class ProductImage extends Component<ImageProps> {
     }
 
     renderPictures = () => {
-        return this.props.pictures.map((p, i) =>
-            <img key={i} className={`pic-${i}`} src={p} />
+        return this.state.pictures.map((p: any, i: any) =>
+            <img key={i} 
+                 onMouseOver={this.onMouseOver}
+                 className={`pic-${i}`}
+                 src={p}
+            />
         );
     }
 }

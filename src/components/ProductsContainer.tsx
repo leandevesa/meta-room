@@ -14,7 +14,7 @@ class ProductsContainer extends Component<any, any> {
 
     constructor(props: any) {
         super(props);
-        this.allProducts = require('../data/products.json')[this.props.category];
+        this.allProducts = Array.from(require('../data/products.json')[this.props.category]);
         this.state = {
             products: [],
             hasMoreItems: true

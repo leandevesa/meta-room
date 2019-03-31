@@ -1,26 +1,53 @@
 import React, { Component } from 'react';
-import Product from './Product';
+import InfiniteScroll from 'react-infinite-scroller';
 import { Product as ProductDTO } from '../dto/Product/Product';
+import Product from './Product';
 
-class ProductsContainer extends Component<any> {
+interface IState {
+    products: Array<any>;
+    hasMoreItems: boolean;
+  }
 
-    private products: Array<ProductDTO>;
+class ProductsContainer extends Component<any, any> {
+
+    private allProducts: Array<ProductDTO>;
 
     constructor(props: any) {
         super(props);
-        this.products = require('../data/products.json')[this.props.category];
+        this.allProducts = require('../data/products.json')[this.props.category];
+        this.state = {
+            products: [],
+            hasMoreItems: true
+        };
+    }
+
+    loadItems(page: any) {
+        const newProducts = this.state.products.concat(this.allProducts.splice(0, 8));
+        this.setState({products: newProducts});
+        if (this.allProducts.length === 0) this.setState({hasMoreItems: false});
     }
     
     render() {
+        const loader = <div key="loader" className="loader">Loading ...</div>;
+        
         return (
-            <div className="row">
+            <InfiniteScroll
+                className="row"
+                pageStart={0}
+                loadMore={this.loadItems.bind(this)}
+                hasMore={this.state.hasMoreItems}
+                loader={loader}>
+                
                 {this.renderProducts()}
-            </div>
+            </InfiniteScroll>
         );
     }
 
-    renderProducts = () => {
-        return this.products.map((p, i) => 
+    renderProducts() {
+        return (
+            this.state
+                .products
+                .map((p: any, i: any) => 
                     <Product 
                         key={i}
                         name={p.name}
@@ -29,7 +56,8 @@ class ProductsContainer extends Component<any> {
                         flags={p.flags}
                         url={p.url}
                     />
-                );
+                )
+        );
     }
 }
 

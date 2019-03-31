@@ -1,18 +1,11 @@
 import React, { Component } from 'react';
 import './NavBar.css';
 import { Category } from '../dto/Category';
+import { Link } from 'react-router-dom';
 
-interface NavBarProps {
-    onCategoryChange: Function
-}
-
-class NavBar extends Component<NavBarProps> {
+class NavBar extends Component<any> {
 
     private categories: Array<Category> = require('../data/categories.json').categories;
-  
-    handleClick = (category: string) => {
-      this.props.onCategoryChange(category);
-    }
 
     render() {
       return (
@@ -24,12 +17,10 @@ class NavBar extends Component<NavBarProps> {
 
     renderCategories() {
       return this.categories.map((c,i) =>
-                <a href="#" 
-                   key={i}
-                   onClick={(e) => this.handleClick(c.id)}>
-                   
-                  {c.title}
-                </a>
+                <Link key={i} 
+                      to={`/products/${c.id}`}>
+                      {c.title}
+                </Link>
               );
     }
 }

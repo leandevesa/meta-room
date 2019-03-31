@@ -2,11 +2,14 @@ import React, { Component } from 'react';
 import Product from './Product';
 import { Product as ProductDTO } from '../dto/Product/Product';
 
-interface ProductsContainerProps {
-    products: Array<ProductDTO>;
-}
+class ProductsContainer extends Component<any> {
 
-class ProductsContainer extends Component<ProductsContainerProps> {
+    private products: Array<ProductDTO>;
+
+    constructor(props: any) {
+        super(props);
+        this.products = require('../data/products.json')[this.props.category];
+    }
     
     render() {
         return (
@@ -17,7 +20,7 @@ class ProductsContainer extends Component<ProductsContainerProps> {
     }
 
     renderProducts = () => {
-        return this.props.products.map((p, i) => 
+        return this.products.map((p, i) => 
                     <Product 
                         key={i}
                         name={p.name}

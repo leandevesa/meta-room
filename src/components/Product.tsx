@@ -8,7 +8,7 @@ class Product extends Component<ProductDTO> {
     
     render() {
         return (
-            <div className="product-container col-md-3 col-sm-6">
+            <div className="product-container col-md-6 col-sm-3">
                 <div className="product-grid3">
                     <ProductImage 
                         pictures={this.props.pictures}

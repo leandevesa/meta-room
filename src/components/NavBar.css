@@ -1,10 +1,9 @@
-/* Style the navbar */
 #navbar {
     overflow: hidden;
     background-color: #333;
+    max-height: 52px;
 }
 
-/* Navbar links */
 #navbar a {
     float: left;
     display: block;
@@ -14,19 +13,77 @@
     text-decoration: none;
 }
 
-/* Page content */
+.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
 .content {
     padding: 16px;
 }
 
-/* The sticky class is added to the navbar with JS when it reaches its scroll position */
 .sticky {
     position: fixed;
     top: 0;
     width: 100%;
 }
 
-/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-.sticky + .content {
+.sticky+.content {
     padding-top: 60px;
+}
+
+.mobile.logo {
+    display: none;
+}
+
+.mobile.logo.hide {
+    display: none;
+}
+
+#navbar .icon {
+    display: none;
+}
+
+.icon {
+    font-size: 24px;
+    height: 80px;
+    vertical-align: middle;
+    margin-top: 7px;
+}
+
+@media screen and (max-width: 600px) {
+    #navbar a:not(:first-child) {
+        display: none;
+    }
+    .mobile.logo {
+        display: block;
+    }
+    #navbar a.icon {
+        float: right;
+        display: block;
+    }
+    #navbar {
+        background-color: black;
+        max-height: 87px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #navbar.responsive a:first-of-type {
+        margin-top: 15px;
+    }
+    #navbar.responsive {
+        position: relative;
+        max-height: 800px;
+    }
+    #navbar.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    #navbar.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
 }

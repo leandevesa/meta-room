@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './CategoryContainer.css';
 import ProductsContainer from './ProductsContainer';
 import { Category } from '../dto/Category';
+import NavBar from './NavBar';
 
 class CategoryContainer extends Component<any> {
 
@@ -27,12 +28,17 @@ class CategoryContainer extends Component<any> {
   
     render() {
       return (
-        <div className="container">
-            <h3 className="h3">{this.title}</h3>
-            <ProductsContainer
-              key={this.category}
-              category={this.category}
-            />
+        <div>
+          <NavBar 
+            activeCategory={this.category}
+          />
+          <div className="container">
+              <h3 className="h3">{this.title}</h3>
+              <ProductsContainer
+                key={this.category}
+                category={this.category}
+              />
+          </div>
         </div>
       );
     }

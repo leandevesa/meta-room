@@ -19,7 +19,7 @@ class ProductImage extends Component<ImageProps, any> {
 
     render() {
         return (
-            <div className="product-image3">
+            <div className="product-image">
                 <a target="_blank" href={this.props.url}>
                     {this.renderPictures()}
                 </a>

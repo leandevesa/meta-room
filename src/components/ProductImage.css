@@ -1,13 +1,13 @@
-.product-image3 {
+.product-image {
     position: relative;
-    height: 300px
+    min-height: 250px;
 }
 
-.product-image3 a {
+.product-image a {
     display: block
 }
 
-.product-image3 img {
+.product-image img {
     width: 100%;
     height: auto
 }

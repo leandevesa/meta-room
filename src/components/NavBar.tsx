@@ -3,6 +3,7 @@ import './NavBar.css';
 import { Category } from '../dto/Category';
 import { Link } from 'react-router-dom';
 import LogoSVG from '../logo.svg';
+import Logo from './Logo';
 
 class NavBar extends Component<any, any> {
 
@@ -29,24 +30,42 @@ class NavBar extends Component<any, any> {
       return classes.join(" ");
     }
 
+    renderCategoryClasses(categoryId: string) {
+      const classes = ["nav-link"];
+      if (categoryId === this.props.activeCategory) classes.push("active");
+      return classes.join(" ");
+    }
+
+    renderHeaderClasses() {
+      const classes = [""];
+      if (this.state.showMenu) classes.push("responsive");
+      return classes.join(" ");
+    }
+
     render() {
       return (
-        <div id="navbar" className={(this.state.showMenu ? 'responsive' : '')}>
-            <img src={LogoSVG} className={this.renderLogoClasses()} />
-            {this.renderCategories()}
-            <a href="#" className="icon" onClick={this.handleMenuClick.bind(this)}>&#9776;</a>
-        </div>
+        <header id="navbar" className={this.renderHeaderClasses()}>
+            <Logo />
+            <div className="navbar-nav-scroll">
+              <ul className="navbar-nav bd-navbar-nav flex-row">
+                {this.renderCategories()}
+              </ul>
+            </div>
+        </header>
       );
     }
 
     renderCategories() {
       return this.categories.map((c,i) =>
-                <Link key={i} 
-                      to={`/products/${c.id}`}
-                      className={(this.props.activeCategory === c.id ? 'active' : '')}
-                      onClick={this.handleMenuClick.bind(this)} >
-                      {c.title}
-                </Link>
+                <li key={i} className="nav-item">
+                  <Link
+                        key={i}
+                        to={`/products/${c.id}`}
+                        className={this.renderCategoryClasses(c.id)}
+                        onClick={this.handleMenuClick.bind(this)} >
+                        {c.title}
+                  </Link>
+                </li>
               );
     }
 }

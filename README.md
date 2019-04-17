@@ -6,6 +6,7 @@ Data Scraping with python<br>
 Responsive<br>
 
 TODO: Brand flags<br>
+TODO: Average category price<br>
 TODO: Filters<br>
 TODO: Geolocation for proximity filter<br>
 TODO: Dominant color detection (python) for filtering<br>

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './CategoryContainer.css';
 import ProductsContainer from './ProductsContainer';
 import { Category } from '../dto/Category';
-import NavBar from './NavBar';
+import SideBar from './SideBar';
 
 class CategoryContainer extends Component<any> {
 
@@ -12,11 +12,11 @@ class CategoryContainer extends Component<any> {
 
     constructor(props: any) {
       super(props);
-      this.update(props);
+      this.update(this.props);
     }
 
     update(props: any) {
-      this.category = props.match.params.category;
+      this.category = props.category;
       this.title = this.categories.filter(c => c.id === this.category)[0].title;
     }
 
@@ -28,15 +28,13 @@ class CategoryContainer extends Component<any> {
   
     render() {
       return (
-        <div>
-          <NavBar 
-            activeCategory={this.category}
-          />
-          <div className="container">
-              <h3 className="h3">{this.title}</h3>
+        <div className="container-fluid">
+          <div className="row flex-xl-nowrap">
+              <SideBar></SideBar>
               <ProductsContainer
                 key={this.category}
                 category={this.category}
+                title={this.title}
               />
           </div>
         </div>

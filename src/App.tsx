@@ -1,17 +1,15 @@
 import React, { Component } from 'react';
-import CategoryContainer from './components/CategoryContainer';
-import Logo from './components/Logo'
 import { Route } from 'react-router';
+import MainContainer from './components/MainContainer';
 
 class App extends Component<any> {
 
   render() {
     return (
       <div>
-          <Logo />
           <Route 
             path='/products/:category' 
-            component={CategoryContainer}
+            component={MainContainer}
           />
       </div>
     )

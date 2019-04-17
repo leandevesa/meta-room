@@ -37,7 +37,7 @@ class NavBar extends Component<any, any> {
     }
 
     renderHeaderClasses() {
-      const classes = [""];
+      const classes = ["navbar-container"];
       if (this.state.showMenu) classes.push("responsive");
       return classes.join(" ");
     }

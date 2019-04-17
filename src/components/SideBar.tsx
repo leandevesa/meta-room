@@ -9,7 +9,7 @@ class SideBar extends Component<any> {
   
     render() {
       return (
-        <div className="col-12 col-md-3 col-xl-2 bd-sidebar">
+        <div className="col-12 col-md-3 col-lg-2 col-xl-2 bd-sidebar">
 
         </div>
       );

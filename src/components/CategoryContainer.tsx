@@ -21,7 +21,7 @@ class CategoryContainer extends Component<any> {
     }
 
     componentWillReceiveProps(nextProps: any) {
-      if (nextProps.location.pathname !== this.props.location.pathname) {
+      if (nextProps.category !== this.category) {
         this.update(nextProps);
       }
     }

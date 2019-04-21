@@ -1,0 +1,10 @@
+h3.h3{
+    margin:1em;
+    font-size:1.7em;
+    color: #666;    
+}
+
+.filters-container {
+    background-color: white;
+    border-right: 1px solid rgba(0,0,0,.1);
+}

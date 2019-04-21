@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './MainContainer.css';
-import NavBar from './NavBar';
-import CategoryContainer from './CategoryContainer';
+import NavBar from './header/NavBar';
+import CategoryContainer from './category/CategoryContainer';
 
 class MainContainer extends Component<any> {
 

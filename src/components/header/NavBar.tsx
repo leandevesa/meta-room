@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './NavBar.css';
-import { Category } from '../dto/Category';
+import { Category } from '../../dto/Category';
 import { Link } from 'react-router-dom';
 import Logo from './Logo';
 
@@ -14,7 +14,7 @@ interface NavBarState {
 
 class NavBar extends Component<NavBarProps, NavBarState> {
 
-    private categories: Array<Category> = require('../data/categories.json').categories;
+    private categories: Array<Category> = require('../../data/categories.json').categories;
 
     constructor(props: NavBarProps) {
       super(props);

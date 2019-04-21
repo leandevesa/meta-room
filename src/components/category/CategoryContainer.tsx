@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './CategoryContainer.css';
-import ProductsContainer from './ProductsContainer';
-import { Category } from '../dto/Category';
-import FiltersContainer from './FiltersContainer';
+import ProductsContainer from './products/ProductsContainer';
+import { Category } from '../../dto/Category';
+import FiltersContainer from '../filters/FiltersContainer';
 
 interface CategoryProps {
     category: string;
@@ -12,7 +12,7 @@ class CategoryContainer extends Component<CategoryProps> {
 
     private title: string = "";
     private category: string = "";
-    private categories: Array<Category> = require('../data/categories.json').categories;
+    private categories: Array<Category> = require('../../data/categories.json').categories;
 
     constructor(props: CategoryProps) {
       super(props);

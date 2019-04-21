@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import InfiniteScroll from 'react-infinite-scroller';
-import { Product as ProductDTO } from '../dto/Product/Product';
+import { Product as ProductDTO } from '../../../dto/Product/Product';
 import Product from './Product';
 
 interface ProductsProps {
@@ -19,7 +19,7 @@ class ProductsContainer extends Component<ProductsProps, ProductsState> {
 
     constructor(props: ProductsProps) {
         super(props);
-        this.allProducts = Array.from(require('../data/products.json')[this.props.category]);
+        this.allProducts = Array.from(require('../../../data/products.json')[this.props.category]);
         this.state = {
             products: [],
             hasMoreItems: true

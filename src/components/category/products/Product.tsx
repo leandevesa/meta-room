@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './Product.css';
 import ProductImage from './ProductImage';
 import ProductContent from './ProductContent';
-import { Product as ProductDTO } from '../dto/Product/Product';
+import { Product as ProductDTO } from '../../../dto/Product/Product';
 
 class Product extends Component<ProductDTO> {
     

@@ -13,7 +13,7 @@ class SideBar extends Component<any> {
         <div className="col-12 col-md-3 col-lg-2 col-xl-2 bd-sidebar">
           <nav className="bd-links" id="bd-docs-nav">
               <Spinner 
-                label="Precio max:"
+                label="Precio hasta:"
                 max={500}
                 min={100}
                 step={10}

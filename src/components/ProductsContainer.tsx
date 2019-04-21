@@ -9,9 +9,9 @@ interface ProductsProps {
 }
 
 interface ProductsState {
-    products: Array<any>;
+    products: Array<ProductDTO>;
     hasMoreItems: boolean;
-  }
+}
 
 class ProductsContainer extends Component<ProductsProps, ProductsState> {
 
@@ -57,7 +57,7 @@ class ProductsContainer extends Component<ProductsProps, ProductsState> {
         return (
             this.state
                 .products
-                .map((p: any, i: any) => 
+                .map((p: ProductDTO, i: number) => 
                     <Product 
                         key={i}
                         name={p.name}

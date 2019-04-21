@@ -2,14 +2,21 @@ import React, { Component } from 'react';
 import './NavBar.css';
 import { Category } from '../dto/Category';
 import { Link } from 'react-router-dom';
-import LogoSVG from '../logo.svg';
 import Logo from './Logo';
 
-class NavBar extends Component<any, any> {
+interface NavBarProps {
+    activeCategory: string;
+}
+
+interface NavBarState {
+    showMenu: boolean;
+}
+
+class NavBar extends Component<NavBarProps, NavBarState> {
 
     private categories: Array<Category> = require('../data/categories.json').categories;
 
-    constructor(props: any) {
+    constructor(props: NavBarProps) {
       super(props);
       this.state = {
         showMenu: false

@@ -1,19 +1,27 @@
 import React, { Component } from 'react';
 import './ProductImage.css';
 import { Flags } from '../dto/Product/Flags';
+import { isNullOrUndefined } from 'util';
 
-interface ImageProps {
+interface ProductImageProps {
     pictures: Array<string>;
     flags?: Flags;
     url: string;
 }
 
-class ProductImage extends Component<ImageProps, any> {
+interface ProductImageState {
+    pictures: Array<string>;
+}
 
-    constructor(props: ImageProps) {
+class ProductImage extends Component<ProductImageProps, ProductImageState> {
+
+    constructor(props: ProductImageProps) {
         super(props);
+
+        const initPicture = this.props.pictures.pop();
+
         this.state = {
-            pictures: [this.props.pictures.pop()]
+            pictures: !isNullOrUndefined(initPicture) ? [initPicture] : []
         };
     }
 
@@ -30,8 +38,11 @@ class ProductImage extends Component<ImageProps, any> {
 
     onMouseOver = () => {
         if (this.props.pictures.length) {
-            this.state.pictures.push(this.props.pictures.pop());
-            this.setState({pictures: this.state.pictures});
+            const picture = this.props.pictures.pop();
+            if (!isNullOrUndefined(picture)) {
+                this.state.pictures.push(picture);
+                this.setState({pictures: this.state.pictures});
+            }
         }
     }
 
@@ -45,7 +56,7 @@ class ProductImage extends Component<ImageProps, any> {
     }
 
     renderPictures = () => {
-        return this.state.pictures.map((p: any, i: any) =>
+        return this.state.pictures.map((p: string, i: number) =>
             <img key={i} 
                  onMouseOver={this.onMouseOver}
                  className={`pic-${i}`}

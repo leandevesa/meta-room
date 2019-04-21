@@ -2,25 +2,29 @@ import React, { Component } from 'react';
 import './CategoryContainer.css';
 import ProductsContainer from './ProductsContainer';
 import { Category } from '../dto/Category';
-import SideBar from './SideBar';
+import FiltersContainer from './FiltersContainer';
 
-class CategoryContainer extends Component<any> {
+interface CategoryProps {
+    category: string;
+}
+
+class CategoryContainer extends Component<CategoryProps> {
 
     private title: string = "";
     private category: string = "";
     private categories: Array<Category> = require('../data/categories.json').categories;
 
-    constructor(props: any) {
+    constructor(props: CategoryProps) {
       super(props);
       this.update(this.props);
     }
 
-    update(props: any) {
+    update(props: CategoryProps) {
       this.category = props.category;
       this.title = this.categories.filter(c => c.id === this.category)[0].title;
     }
 
-    componentWillReceiveProps(nextProps: any) {
+    componentWillReceiveProps(nextProps: CategoryProps) {
       if (nextProps.category !== this.category) {
         this.update(nextProps);
       }
@@ -30,7 +34,7 @@ class CategoryContainer extends Component<any> {
       return (
         <div className="container-fluid">
           <div className="row flex-xl-nowrap">
-              <SideBar></SideBar>
+              <FiltersContainer></FiltersContainer>
               <ProductsContainer
                 key={this.category}
                 category={this.category}

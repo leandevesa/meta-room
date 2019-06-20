@@ -1,39 +1,8 @@
-.btn .spinner {
-  min-width: 2.5rem;
-}
 
-.spinner .form-control {
-  text-align: center;
-}
-
-.bd-toc-item {
-  margin-top: 10px;
-}
-
-@media screen and (max-width: 768px) {
-  .bd-toc-item:first-of-type {
-    margin-top: 50px;
-  }
-}
-
-.bd-toc-item:last-of-type {
-  margin-bottom: 20px;
-}
 
 .bd-label {
   display: block;
   padding: .25rem;
   font-weight: 500;
   color: rgba(0, 0, 0, .65);
-}
-
-/* Disable webkit number arrows */
-
-.spinner .form-control::-webkit-outer-spin-button, .spinner .form-control::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.spinner .form-control {
-  -moz-appearance: textfield;
 }

@@ -36,8 +36,15 @@ h3.h3{
 }
 
 @media screen and (max-width: 768px) {
-    .filters-nav {
-        display: none;
+    .filters-container {
+        /* transition */
+        max-height: 70px;
+        overflow: hidden;
+        transition: max-height 0.15s ease-out;
+    }
+    .filters-container.show {
+        max-height: 999px;
+        transition: max-height 0.25s ease-in;
     }
     .filters-container .mobile {
         display: block;

@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import './Toggle.css';
+import './Filter.css';
 
 class Toggle extends Component {
     render() {
       return (
-        <div className="bd-toc-item">
+        <div className="filter">
             <label className="bd-label">Género:</label>
             <div className="toggle-container">
                 <label className="toggle-label left">M</label>

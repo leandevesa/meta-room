@@ -1,0 +1,13 @@
+.filter {
+    margin-top: 15px;
+}
+
+@media screen and (max-width: 768px) {
+    .filter:first-of-type {
+        margin-top: 50px;
+    }
+}
+
+.filter:last-of-type {
+    margin-bottom: 20px;
+}

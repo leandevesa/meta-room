@@ -1,22 +1,33 @@
 import React, { Component } from 'react';
 import './Hamburger.css';
 
-class Hamburger extends Component<any, any> {
+interface HamburgerProps {
+    handleHamburgerClick(hamburgerState: boolean): void;
+}
+
+interface HamburgerState {
+    isOpened: boolean;
+}
+
+class Hamburger extends Component<HamburgerProps, HamburgerState> {
 
     constructor(props: any) {
         super(props);
         this.state = {
-            isClosed: false
-        }
+            isOpened: false
+        };
+        this.props.handleHamburgerClick(this.state.isOpened);
     }
   
     handleClick() {
-        this.setState({isClosed: !this.state.isClosed});
+        const newState = !this.state.isOpened;
+        this.setState({isOpened: newState});
+        this.props.handleHamburgerClick(newState);
     }
 
     renderClasses() {
         const classes = ["hamburger"];
-        if (this.state.isClosed) {
+        if (this.state.isOpened) {
             classes.push("cross");
         }
         return classes.join(" ");

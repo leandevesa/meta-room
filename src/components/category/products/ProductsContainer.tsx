@@ -15,11 +15,8 @@ interface ProductsState {
 
 class ProductsContainer extends Component<ProductsProps, ProductsState> {
 
-    private allProducts: Array<ProductDTO>;
-
     constructor(props: ProductsProps) {
         super(props);
-        this.allProducts = Array.from(require('../../../data/products.json')[this.props.category]);
         this.state = {
             products: [],
             hasMoreItems: true
@@ -27,14 +24,23 @@ class ProductsContainer extends Component<ProductsProps, ProductsState> {
     }
 
     loadItems(page: any) {
-        const newProducts = this.state.products.concat(this.allProducts.splice(0, 8));
-        this.setState({products: newProducts});
-        if (this.allProducts.length === 0) this.setState({hasMoreItems: false});
+
+        page -= 1;
+
+        fetch(`http://localhost:5000/api/products?category=${this.props.category}&page=${page}`)
+            .then(res => res.json())
+            .then(res => {
+                const newProducts = this.state.products.concat(res.products);
+                this.setState({
+                    products: newProducts,
+                    hasMoreItems: !res.pagination.last
+                });
+            });
     }
-    
+
     render() {
         const loader = <div key="loader" className="loader">Loading ...</div>;
-        
+
         return (
             <div className="col-12 col-md-9 col-lg-10 col-xl-10 py-md-3 pl-md-5 bd-content">
                 <div className="row">
@@ -46,7 +52,7 @@ class ProductsContainer extends Component<ProductsProps, ProductsState> {
                     loadMore={this.loadItems.bind(this)}
                     hasMore={this.state.hasMoreItems}
                     loader={loader}>
-                    
+
                     {this.renderProducts()}
                 </InfiniteScroll>
             </div>
@@ -57,8 +63,8 @@ class ProductsContainer extends Component<ProductsProps, ProductsState> {
         return (
             this.state
                 .products
-                .map((p: ProductDTO, i: number) => 
-                    <Product 
+                .map((p: ProductDTO, i: number) =>
+                    <Product
                         key={i}
                         name={p.name}
                         price={p.price}

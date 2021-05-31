@@ -1,0 +1,969 @@
+{
+    "shirts": [
+        {
+            "name": "CAMISA PRAGA",
+            "price": {
+                "now": 1134.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_6312_500x.jpg?v=1548854230",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_6311-600x737_1024x.jpg?v=1548854207"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/v-camisas/products/camisa-praga"
+        },
+        {
+            "name": "CAMISA ALEX",
+            "price": {
+                "now": 894.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_6176-600x738_500x.jpg?v=1548854891",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_6170_1024x.jpg?v=1548854891"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/v-camisas/products/camisa-alex"
+        },
+        {
+            "name": "CAMISA HAWAII",
+            "price": {
+                "now": 1134.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_8131_500x.jpg?v=1549031914",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_8135_1024x.jpg?v=1549031944"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/v-camisas/products/camisa-hawaii"
+        },
+        {
+            "name": "CAMISA DE JEAN MYKONOS",
+            "price": {
+                "now": 834.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_6222-600x561_500x.jpg?v=1548855002",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_6225_1024x.jpg?v=1549031577"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/v-camisas/products/camisa-de-jean-mykonos-1"
+        },
+        {
+            "name": "CAMISA MYKONOS",
+            "price": {
+                "now": 894.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/summer-59_500x.jpg?v=1549032124",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/summer-58-600x803_1024x.jpg?v=1549032151"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/v-camisas/products/camisa-mykonos-1"
+        },
+        {
+            "name": "CAMISA LISBOA",
+            "price": {
+                "now": 1134.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/33AAFB18-895C-4F56-8044-C15191666CD0_500x.jpg?v=1549031983",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/Malibu-46-600x780_1024x.jpg?v=1549032008"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/v-camisas/products/camisa-lisboa"
+        },
+        {
+            "name": "CAMPERA DE JEAN ELVIS",
+            "price": {
+                "now": 2490.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_8339_500x.jpg?v=1548854290",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/img_8345-600x737_1024x.jpg?v=1548854018"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/v-camisas/products/campera-de-jean-elvis"
+        },
+        {
+            "name": "CAMISA DE JEAN MYKONOS",
+            "price": {
+                "now": 834.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_6330_500x.jpg?v=1548855054",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_6334-1-600x738_1024x.jpg?v=1548853726"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/v-camisas/products/camisa-de-jean-mykonos"
+        },
+        {
+            "name": "CAMISA MYKONOS",
+            "price": {
+                "now": 894.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_6010_500x.jpg?v=1548855178",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_5996-600x737_1024x.jpg?v=1548854002"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/v-camisas/products/camisa-mykonos"
+        }
+    ],
+    "tshirts": [
+        {
+            "name": "REMERA VINTAGE",
+            "price": {
+                "now": 425.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_6046_500x.jpg?v=1549380715",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_6052-600x738_1024x.jpg?v=1549380732"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/otros/products/remera-vintage"
+        },
+        {
+            "name": "REMERA TOGETHER",
+            "price": {
+                "now": 345.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/REMERA_TOGETHER_2_500x.jpg?v=1550499659",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/REMERA_TOGETHER_1_1024x.jpg?v=1550499692"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/otros/products/remera-together"
+        },
+        {
+            "name": "REMERA GUNS",
+            "price": {
+                "now": 276.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/REMERA-GUNS_500x.jpg?v=1549035901",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/guns2-600x408_1024x.png?v=1549035867"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/otros/products/remera-guns"
+        },
+        {
+            "name": "REMERA VINTAGE",
+            "price": {
+                "now": 345.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_6018_500x.jpg?v=1549380762",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_6035_1024x.jpg?v=1549380787"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/otros/products/remera-vintage-1"
+        },
+        {
+            "name": "REMERA SHOULD I STAY",
+            "price": {
+                "now": 345.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/REMERA_SHOULD_2_500x.jpg?v=1550499721",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/REMERA_SHOULD_1_1024x.jpg?v=1550499743"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/otros/products/remera-should-i-stay"
+        },
+        {
+            "name": "REMERA TOM",
+            "price": {
+                "now": 354.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_5502-copia_500x.jpg?v=1549380845",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_5492-copia-600x738_1024x.jpg?v=1549380870"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/otros/products/remera-tom"
+        },
+        {
+            "name": "REMERA DONT EVER",
+            "price": {
+                "now": 345.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/REMERA_DONT_EVER_1_500x.jpg?v=1551451852",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/REMERA_DONT_EVER_2_1024x.jpg?v=1551451887"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/otros/products/copia-de-remera-imperial"
+        },
+        {
+            "name": "REMERA IMPERIAL",
+            "price": {
+                "now": 345.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/REMERA_IMPERIAL_1_500x.jpg?v=1551451507",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/REMERA_IMPERIAL_3_1024x.jpg?v=1551451529"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/otros/products/copia-de-remera-should-i-stay"
+        },
+        {
+            "name": "REMERA HEART",
+            "price": {
+                "now": 345.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/REMERA_HEART_2_500x.jpg?v=1551111027",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/REMERA_HEART_1_1024x.jpg?v=1551105871"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/otros/products/remera-hear"
+        },
+        {
+            "name": "MUSCULOSA BRAD",
+            "price": {
+                "now": 553.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_9880_500x.jpg?v=1549382911",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_9880_500x.jpg?v=1549382911"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/frontpage/products/musculosa-brad-1"
+        },
+        {
+            "name": "REMERA JACK",
+            "price": {
+                "now": 525.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_5521-copia_500x.jpg?v=1548852519",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_5530-copia-600x738_1024x.jpg?v=1548852520"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/frontpage/products/remera-jack"
+        },
+        {
+            "name": "REMERA TONY",
+            "price": {
+                "now": 525.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_3855_500x.jpeg?v=1548853442",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_3857-600x737_1024x.jpeg?v=1548777137"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/frontpage/products/remera-tony-1"
+        },
+        {
+            "name": "REMERA AC/DC HIGHWAY",
+            "price": {
+                "now": 483.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_5980_500x.jpg?v=1548852036",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_5975-600x738_1024x.jpg?v=1548852037"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/frontpage/products/remera-ac-dc-highway"
+        },
+        {
+            "name": "REMERA MAGIC",
+            "price": {
+                "now": 553.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_6390-1_500x.jpg?v=1548855440",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_6389-600x737_1024x.jpg?v=1548779100"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/frontpage/products/remera-magic"
+        },
+        {
+            "name": "REMERA RICHIE",
+            "price": {
+                "now": 595.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_5610-copia-600x689_500x.jpg?v=1548855398",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_8241-600x738_1024x.jpg?v=1548778941"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/frontpage/products/remera-richie-1"
+        },
+        {
+            "name": "REMERA KING NOTHING",
+            "price": {
+                "now": 483.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_8311-1_500x.jpg?v=1548855302",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_8348-600x738_1024x.jpg?v=1548851717"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/frontpage/products/remera-king-nothing"
+        },
+        {
+            "name": "MUSCULOSA FELIX",
+            "price": {
+                "now": 483.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_5406_500x.jpg?v=1548855851",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_5406_500x.jpg?v=1548855851"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/frontpage/products/musculosa-felix-2"
+        },
+        {
+            "name": "REMERA AXEL",
+            "price": {
+                "now": 483.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_5968_500x.jpg?v=1548855253",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_5972-600x737_1024x.jpg?v=1548852182"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/frontpage/products/remera-axel"
+        },
+        {
+            "name": "REMERA REBEL",
+            "price": {
+                "now": 483.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_8276_500x.jpg?v=1548851812",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_8278-600x737_1024x.jpg?v=1548851813"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/frontpage/products/remera-rebel"
+        },
+        {
+            "name": "REMERA MAGIC",
+            "price": {
+                "now": 553.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_5926-600x737_500x.jpg?v=1548856261",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_5930_1024x.jpg?v=1548779380"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/frontpage/products/remera-magic-2"
+        },
+        {
+            "name": "REMERA RICHIE",
+            "price": {
+                "now": 595.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_9751_Facetune_03-07-2018-16-43-17-600x738_500x.jpg?v=1548856107",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_8457_1024x.jpg?v=1548778855"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/frontpage/products/remera-richie"
+        },
+        {
+            "name": "REMERA MATT",
+            "price": {
+                "now": 483.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_8456-1_500x.jpg?v=1548855943",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_8457-1-600x737_1024x.jpg?v=1548778237"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/frontpage/products/remera-matt-5"
+        },
+        {
+            "name": "REMERA MATT",
+            "price": {
+                "now": 483.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_3779_500x.jpeg?v=1548855547",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_3780-600x738_1024x.jpeg?v=1548777990"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/frontpage/products/remera-matt-3"
+        },
+        {
+            "name": "REMERA MATT",
+            "price": {
+                "now": 483.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_3833_500x.jpeg?v=1548855726",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_3834-600x737_1024x.jpeg?v=1548777700"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/frontpage/products/remera-matt-1"
+        },
+        {
+            "name": "REMERA MATT",
+            "price": {
+                "now": 483.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_3827-1_500x.jpeg?v=1548855642",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_3825-600x737_1024x.jpeg?v=1548777279"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/frontpage/products/remera-matt"
+        },
+        {
+            "name": "MUSCULOSA FELIX",
+            "price": {
+                "now": 483.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_5477_500x.jpg?v=1548855811",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_5477_500x.jpg?v=1548855811"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/frontpage/products/musculosa-felix-3"
+        },
+        {
+            "name": "MUSCULOSA FELIX",
+            "price": {
+                "now": 468.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_5535-600x738_500x.jpg?v=1548855868",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_5535-600x738_500x.jpg?v=1548855868"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/frontpage/products/musculosa-felix-1"
+        },
+        {
+            "name": "MUSCOLOSA FELIX",
+            "price": {
+                "now": 468.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_5713_500x.jpg?v=1549383228",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_5711-600x737_1024x.jpg?v=1549383247"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/frontpage/products/muscolosa-felix"
+        },
+        {
+            "name": "MUSCULOSA BRAD",
+            "price": {
+                "now": 553.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_9879_500x.jpg?v=1549378937",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_9879_500x.jpg?v=1549378937"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/frontpage/products/musculosa-brad"
+        },
+        {
+            "name": "REMERA CADILLAC",
+            "price": {
+                "now": 525.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_3821_500x.jpeg?v=1551450535",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_3824_1024x.jpeg?v=1551450556"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/frontpage/products/copia-de-remera-cadillac-1"
+        },
+        {
+            "name": "REMERA CADILLAC",
+            "price": {
+                "now": 525.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_8566_500x.jpg?v=1551449647",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_8564_1024x.jpg?v=1551449691"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/frontpage/products/copia-de-remera-cadillac"
+        },
+        {
+            "name": "REMERA RICHIE",
+            "price": {
+                "now": 595.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_8246_500x.jpg?v=1551104626",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_8252_1024x.jpg?v=1551104646"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/frontpage/products/copia-de-remera-richie"
+        },
+        {
+            "name": "REMERA IZZY",
+            "price": {
+                "now": 483.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_5938_500x.jpg?v=1548852312",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_5948-600x738_1024x.jpg?v=1548852312"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/frontpage/products/remera-izzy"
+        },
+        {
+            "name": "REMERA MOTORHEAD",
+            "price": {
+                "now": 483.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_8289-600x737_500x.jpg?v=1548856331",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_8293_1024x.jpg?v=1548851569"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/frontpage/products/remera-motorhead"
+        },
+        {
+            "name": "REMERA MAGIC",
+            "price": {
+                "now": 553.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_5888_500x.jpg?v=1548856299",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_5896-600x737_1024x.jpg?v=1548779233"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/frontpage/products/remera-magic-1"
+        },
+        {
+            "name": "REMERA CADILLAC",
+            "price": {
+                "now": 525.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_3813_Facetune_09-11-2018-21-58-44_500x.jpg?v=1548856139",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_3812_Facetune_09-11-2018-21-58-10-600x737_1024x.jpg?v=1548778682"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/frontpage/products/remera-cadillac-2"
+        },
+        {
+            "name": "REMERA CADILLAC",
+            "price": {
+                "now": 525.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_3784_500x.jpeg?v=1548855493",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_3782-1-600x737_1024x.jpeg?v=1548778552"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/frontpage/products/remera-cadillac-1"
+        },
+        {
+            "name": "REMERA CADILLAC",
+            "price": {
+                "now": 525.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_3846_500x.jpeg?v=1548856172",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_3843-600x738_1024x.jpeg?v=1548778420"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/frontpage/products/remera-cadillac"
+        },
+        {
+            "name": "REMERA MATT",
+            "price": {
+                "now": 483.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_3841-600x737_500x.jpeg?v=1548855701",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_3842_1024x.jpeg?v=1548778059"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/frontpage/products/remera-matt-4"
+        },
+        {
+            "name": "REMERA MATT",
+            "price": {
+                "now": 483.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_3828-1_500x.jpeg?v=1548855592",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_8419-1-600x737_1024x.jpg?v=1548777857"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/frontpage/products/remera-matt-2"
+        },
+        {
+            "name": "REMERA TONY",
+            "price": {
+                "now": 525.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_3852_500x.jpeg?v=1549036155",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/Malibu-81-600x900_1024x.jpg?v=1549036178"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/frontpage/products/remera-tony"
+        },
+        {
+            "name": "MUSCULOSA FELIX",
+            "price": {
+                "now": 483.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_5589_500x.jpg?v=1548855890",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_5592-600x737_1024x.jpg?v=1548775862"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/frontpage/products/musculosa-felix"
+        }
+    ],
+    "swimsuits": [
+        {
+            "name": "SHORT DE BA\u00d1O",
+            "price": {
+                "now": 833.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_5610_500x.jpg?v=1549382974",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_5611-600x737_1024x.jpg?v=1549382993"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/v-short-de-bano/products/short-de-bano-3"
+        },
+        {
+            "name": "SHORT DE BA\u00d1O",
+            "price": {
+                "now": 833.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_5692_500x.jpg?v=1548862533",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_5701-600x737_1024x.jpg?v=1548862534"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/v-short-de-bano/products/short-de-bano-6"
+        },
+        {
+            "name": "SHORT DE BA\u00d1O MILO",
+            "price": {
+                "now": 903.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_5346-600x737_500x.jpg?v=1548859090",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_5347_1024x.jpg?v=1548859094"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/v-short-de-bano/products/short-de-bano-milo"
+        },
+        {
+            "name": "SHORT DE BA\u00d1O VINCENT",
+            "price": {
+                "now": 833.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_5478_500x.jpg?v=1548860341",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_5493-600x737_1024x.jpg?v=1548860342"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/v-short-de-bano/products/short-de-bano-vincent-1"
+        },
+        {
+            "name": "SHORT DE BA\u00d1O",
+            "price": {
+                "now": 833.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_5656_500x.jpg?v=1548861530",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_5668-600x738_1024x.jpg?v=1548861531"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/v-short-de-bano/products/short-de-bano-2"
+        },
+        {
+            "name": "SHORT DE BA\u00d1O",
+            "price": {
+                "now": 833.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/AZUL-1_500x.jpg?v=1548861380",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/SHORT-DE-BANO-LISO-AZUL-2-600x737_1024x.jpg?v=1548861381"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/v-short-de-bano/products/short-de-bano-1"
+        },
+        {
+            "name": "SHORT DE BA\u00d1O MARK",
+            "price": {
+                "now": 833.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_5520_500x.jpg?v=1548859584",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_5522-600x738_1024x.jpg?v=1548859585"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/v-short-de-bano/products/short-de-bano-mark"
+        },
+        {
+            "name": "SHORT DE BA\u00d1O CIRO",
+            "price": {
+                "now": 903.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_5318_500x.jpg?v=1548858935",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_5323-600x738_1024x.jpg?v=1548858936"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/v-short-de-bano/products/short-de-bano-ciro"
+        },
+        {
+            "name": "SHORT DE BA\u00d1O RIO",
+            "price": {
+                "now": 903.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_5377_500x.jpg?v=1548858837",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_5383-600x737_1024x.jpg?v=1548858838"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/v-short-de-bano/products/short-de-bano-rio"
+        },
+        {
+            "name": "SHORT DE BA\u00d1O",
+            "price": {
+                "now": 833.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/trajesdeba_o023_500x.jpg?v=1548862390",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/trajesdeba_o022-600x750_1024x.jpg?v=1548862391"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/v-short-de-bano/products/short-de-bano-5"
+        },
+        {
+            "name": "SHORT DE BA\u00d1O",
+            "price": {
+                "now": 833.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/SHORT-DE-BANO-LISO-VERDE-1_500x.jpg?v=1548862285",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/SHORT-DE-BANO-LISO-VERDE-2-600x737_1024x.jpg?v=1548862286"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/v-short-de-bano/products/short-de-bano-4"
+        },
+        {
+            "name": "SHORT DE BA\u00d1O",
+            "price": {
+                "now": 833.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_5864_500x.jpg?v=1548861215",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_5866-600x737_1024x.jpg?v=1548861215"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/v-short-de-bano/products/short-de-bano"
+        },
+        {
+            "name": "SHORT DE BA\u00d1O SMITH",
+            "price": {
+                "now": 833.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_5455_500x.jpg?v=1548860939",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_5457-600x737_1024x.jpg?v=1548860940"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/v-short-de-bano/products/short-de-bano-smith"
+        },
+        {
+            "name": "SHORT DE BA\u00d1O VINCENT",
+            "price": {
+                "now": 833.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_5431_500x.jpg?v=1548860279",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_5432-600x738_1024x.jpg?v=1548860280"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/v-short-de-bano/products/short-de-bano-vincent"
+        },
+        {
+            "name": "SHORT DE BA\u00d1O CAMUFLADO",
+            "price": {
+                "now": 833.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_5419-600x737_500x.jpg?v=1548859986",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_5420_1024x.jpg?v=1548859989"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/v-short-de-bano/products/short-de-bano-camuflado"
+        }
+    ],
+    "pants": [
+        {
+            "name": "JEAN RALPH",
+            "price": {
+                "now": 975.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_3769_Facetune_09-11-2018-21-49-33_500x.jpg?v=1549383142",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_3768_Facetune_09-11-2018-21-49-03-600x737_1024x.jpg?v=1549383163"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/v-jeans-y-pantalones/products/jean-ralph"
+        },
+        {
+            "name": "JEAN ELLIOT",
+            "price": {
+                "now": 975.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_8288_Facetune_22-11-2018-00-04-43-1_500x.jpg?v=1549383092",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_8287_Facetune_22-11-2018-00-05-37-1-600x799_1024x.jpg?v=1549383113"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/v-jeans-y-pantalones/products/jean-elliot"
+        },
+        {
+            "name": "JEAN MATT",
+            "price": {
+                "now": 975.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/JEAN_MATT_2_500x.jpg?v=1550846981",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/JEAN_MATT_1_1024x.jpg?v=1550847013"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/v-jeans-y-pantalones/products/jean-matt"
+        },
+        {
+            "name": "JEAN RECTO VALENTINO BLUE",
+            "price": {
+                "now": 975.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/JEAN_VALENTINO_BLUE_1_500x.JPG?v=1551108437",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/JEAN_VALENTINO_BLUE_2_1024x.JPG?v=1551108441"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/v-jeans-y-pantalones/products/copia-de-jean-elliot"
+        },
+        {
+            "name": "JEAN RECTO VALENTINO",
+            "price": {
+                "now": 975.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/JEAN_RECTO_VALENTINO_1_500x.jpg?v=1551282723",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/JEAN_RECTO_VALENTINO_1024x.jpg?v=1551282747"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/v-jeans-y-pantalones/products/copia-de-jean-recto-valentino-blue"
+        },
+        {
+            "name": "JEAN PARKER",
+            "price": {
+                "now": 975.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/JEAN_MORRISON_1_500x.jpg?v=1551197214",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/JEAN_MORRISON_2_1024x.jpg?v=1551197221"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/v-jeans-y-pantalones/products/copia-de-jean-elliot-1"
+        }
+    ],
+    "covert": [
+        {
+            "name": "BUZO MONOCHROME",
+            "price": {
+                "now": 774.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_6491-1_500x.jpg?v=1549030547",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_6503-1-600x738_1024x.jpg?v=1549030574"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/v-buzos-y-sweater/products/buzo-monochrome"
+        },
+        {
+            "name": "BUZO MONOCHROME",
+            "price": {
+                "now": 774.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_7073-Editar-1_500x.jpg?v=1549030626",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_6453-1-600x738_1024x.jpg?v=1549030652"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/v-buzos-y-sweater/products/buzo-monochrome-1"
+        },
+        {
+            "name": "SWEATTER AMSTERDAM",
+            "price": {
+                "now": 834.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_5553_500x.jpg?v=1550154328",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_5548-600x733_1024x.jpg?v=1550154328"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/v-buzos-y-sweater/products/sweatter-amsterdam"
+        },
+        {
+            "name": "BUZO MONOCHROME",
+            "price": {
+                "now": 774.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_6425-2-600x617_500x.jpg?v=1549030819",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_6428-1_1024x.jpg?v=1549030841"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/v-buzos-y-sweater/products/buzo-monochrome-3"
+        },
+        {
+            "name": "BUZO SUMMER",
+            "price": {
+                "now": 834.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/F64F3CDC-1DCB-437B-8C10-B6715A202FF0_500x.jpg?v=1549030936",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_7819-600x796_1024x.jpg?v=1549030966"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/v-buzos-y-sweater/products/buzo-summer"
+        },
+        {
+            "name": "BUZO CANGURO FRANK",
+            "price": {
+                "now": 1014.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/AB8B8AC8-6EEE-479D-B355-ABB1475EAC53_500x.jpg?v=1549029975",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/88709D2F-3E7D-4E84-9BF7-9272CB0FC7AB-600x1067_1024x.jpg?v=1549029939"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/v-buzos-y-sweater/products/buzo-canguro-frank"
+        },
+        {
+            "name": "BUZO SUMMER",
+            "price": {
+                "now": 834.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/MALIBU-63_a54f862d-34d9-4605-9c2d-00b20923a3c9_500x.jpg?v=1550843909",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/MALIBU-63_a54f862d-34d9-4605-9c2d-00b20923a3c9_500x.jpg?v=1550843909"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/v-buzos-y-sweater/products/buzo-summer-3"
+        },
+        {
+            "name": "SWEATTER AMSTERDAM",
+            "price": {
+                "now": 834.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_5595-1_500x.jpg?v=1549036650",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/MLB32-600x900_1024x.jpg?v=1549036680"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/v-buzos-y-sweater/products/sweatter-amsterdam-1"
+        },
+        {
+            "name": "BUZO MONOCHROME",
+            "price": {
+                "now": 774.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_6398-600x738_500x.jpg?v=1548856925",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_6406_1024x.jpg?v=1548856929"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/v-buzos-y-sweater/products/buzo-monochrome-2"
+        },
+        {
+            "name": "BUZO SUMMER",
+            "price": {
+                "now": 834.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_2850-1_500x.jpg?v=1549031162",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_2291-600x686_1024x.jpg?v=1549031184"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/v-buzos-y-sweater/products/buzo-summer-2"
+        },
+        {
+            "name": "BUZO SUMMER",
+            "price": {
+                "now": 834.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_2846-1_500x.jpg?v=1549031022",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_7821_Facetune_12-12-2018-15-12-17-600x840_1024x.jpg?v=1549031053"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/v-buzos-y-sweater/products/buzo-summer-1"
+        },
+        {
+            "name": "BUZO DOUGLAS",
+            "price": {
+                "now": 1014.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_5295-copia-1_500x.jpg?v=1549030015",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_5300-copia-600x737_1024x.jpg?v=1549030045"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/v-buzos-y-sweater/products/buzo-douglas"
+        },
+        {
+            "name": "CAMPERA BOMBER JOYCE",
+            "price": {
+                "now": 796.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_5705-copia-600x737_500x.jpg?v=1549380425",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_5719-copia-600x737_1024x.jpg?v=1549380404"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/r-camperas-y-chalecos/products/campera-bomber-joyce"
+        },
+        {
+            "name": "BUZO JOHN",
+            "price": {
+                "now": 645.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/MALIBU-43_500x.jpg?v=1551107073",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/MALIBU-45_1024x.jpg?v=1551107118"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/r-buzos-y-sweaters/products/copia-de-buzo-john"
+        },
+        {
+            "name": "BUZO JOHN",
+            "price": {
+                "now": 645.0
+            },
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/MALIBU-69_500x.jpg?v=1550848599",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/MALIBU-70_1024x.jpg?v=1550848636"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/r-buzos-y-sweaters/products/buzo-john"
+        }
+    ]
+}

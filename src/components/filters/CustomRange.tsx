@@ -7,6 +7,7 @@ import Range, { Marks } from 'rc-slider';
 interface RangeProps {
     max: number;
     min: number;
+    avg: number;
     label: string;
 }
 
@@ -24,11 +25,11 @@ class CustomRange extends Component<RangeProps, RangeState> {
     }
 
     getMarks(): Marks {
-        const average = Math.round((this.props.max - this.props.min) / 2); //TODO: to back?
+        const average = Math.round((this.props.max + this.props.min) / 2); //TODO: to back?
         
         const marks: Marks = {};
         marks[this.props.min] = `${this.props.min.toString()}$`;
-        marks[average] = <strong>{average.toString()}$</strong>;
+        marks[this.props.avg] = <strong>{this.props.avg.toString()}$</strong>;
         marks[this.props.max] = `${this.props.max.toString()}$`;
         
         return marks;

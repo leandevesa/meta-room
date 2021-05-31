@@ -1,41 +1,20 @@
 import React, { Component } from 'react';
 import InfiniteScroll from 'react-infinite-scroller';
-import { Product as ProductDTO } from '../../../dto/Product/Product';
 import Product from './Product';
+import { Product as ProductDTO } from '../../../dto/Product/Product';
 
 interface ProductsProps {
-    category: string,
-    title: string
-}
-
-interface ProductsState {
+    category: string;
+    title: string;
     products: Array<ProductDTO>;
     hasMoreItems: boolean;
+    loadItems(page: number): void
 }
 
-class ProductsContainer extends Component<ProductsProps, ProductsState> {
+class ProductsContainer extends Component<ProductsProps> {
 
     constructor(props: ProductsProps) {
         super(props);
-        this.state = {
-            products: [],
-            hasMoreItems: true
-        };
-    }
-
-    loadItems(page: any) {
-
-        page -= 1;
-
-        fetch(`http://localhost:5000/api/products?category=${this.props.category}&page=${page}`)
-            .then(res => res.json())
-            .then(res => {
-                const newProducts = this.state.products.concat(res.products);
-                this.setState({
-                    products: newProducts,
-                    hasMoreItems: !res.pagination.last
-                });
-            });
     }
 
     render() {
@@ -49,8 +28,8 @@ class ProductsContainer extends Component<ProductsProps, ProductsState> {
                 <InfiniteScroll
                     className="row"
                     pageStart={0}
-                    loadMore={this.loadItems.bind(this)}
-                    hasMore={this.state.hasMoreItems}
+                    loadMore={this.props.loadItems.bind(this)}
+                    hasMore={this.props.hasMoreItems}
                     loader={loader}>
 
                     {this.renderProducts()}
@@ -61,7 +40,7 @@ class ProductsContainer extends Component<ProductsProps, ProductsState> {
 
     renderProducts() {
         return (
-            this.state
+            this.props
                 .products
                 .map((p: ProductDTO, i: number) =>
                     <Product

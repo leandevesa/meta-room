@@ -3,10 +3,15 @@ import './FiltersContainer.css';
 import CustomRange from './CustomRange';
 import Toggle from './Toggle';
 import Hamburger from './Hamburger';
+import { Filters } from '../../dto/Product/Filters/Filters';
 
-class FiltersContainer extends Component<any, any> {
+interface FiltersProps {
+  filters?: Filters
+}
 
-    constructor(props: any) {
+class FiltersContainer extends Component<FiltersProps, any> {
+
+    constructor(props: FiltersProps) {
       super(props);
       this.state = {
           filtersOpened: false
@@ -24,7 +29,7 @@ class FiltersContainer extends Component<any, any> {
     }
   
     render() {
-      return (
+      return this.props.filters ? (
         <div className={this.renderNavClasses()}>
           <div className="mobile">
             <span className="label">Filtros</span>
@@ -35,13 +40,14 @@ class FiltersContainer extends Component<any, any> {
           <nav className="filters-nav">
               <Toggle></Toggle>
               <CustomRange 
-                min={0}
-                max={100}
+                min={this.props.filters.prices.min}
+                avg={this.props.filters.prices.avg}
+                max={this.props.filters.prices.max}
                 label="Precio"
               />
           </nav>
         </div>
-      );
+      ) : "";
     }
 }
 

@@ -9,6 +9,7 @@ interface RangeProps {
     min: number;
     avg: number;
     label: string;
+    rangeChanged(newValue: number): void
 }
 
 interface RangeState {
@@ -16,6 +17,8 @@ interface RangeState {
 }
 
 class CustomRange extends Component<RangeProps, RangeState> {
+
+    private tid: any = undefined;
 
     constructor(props: RangeProps) {
       super(props);
@@ -25,11 +28,10 @@ class CustomRange extends Component<RangeProps, RangeState> {
     }
 
     getMarks(): Marks {
-        const average = Math.round((this.props.max + this.props.min) / 2); //TODO: to back?
         
         const marks: Marks = {};
         marks[this.props.min] = `${this.props.min.toString()}$`;
-        marks[this.props.avg] = <strong>{this.props.avg.toString()}$</strong>;
+        marks[this.props.avg] = <strong>{this.state.value.toString()}$</strong>;
         marks[this.props.max] = `${this.props.max.toString()}$`;
         
         return marks;
@@ -37,7 +39,10 @@ class CustomRange extends Component<RangeProps, RangeState> {
 
     handleValueChange(value: any) {
         this.setState({value: value});
-        console.log(value);
+        if (this.tid) clearTimeout(this.tid);
+        this.tid = setTimeout(() => {
+            this.props.rangeChanged(value);
+        }, 600);
     }
   
     render() {

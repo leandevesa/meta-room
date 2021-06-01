@@ -10,10 +10,19 @@ interface CategoryProps {
   category: string;
 }
 
+interface PriceFilter {
+  max: number;
+}
+
+interface ActiveFilters {
+  price?: PriceFilter;
+}
+
 interface CategoryState {
-  filters?: FiltersDTO;
   products: Array<ProductDTO>;
   hasMoreItems: boolean;
+  filters?: FiltersDTO;
+  activeFilters?: ActiveFilters;
 }
 
 class CategoryContainer extends Component<CategoryProps, CategoryState> {
@@ -47,7 +56,12 @@ class CategoryContainer extends Component<CategoryProps, CategoryState> {
         this.setState({
           products: newProducts,
           filters: res.filters,
-          hasMoreItems: !res.pagination.last
+          hasMoreItems: !res.pagination.last,
+          activeFilters: {
+            price: {
+              max: res.filters.prices.max
+            }
+          }
         });
       });
   }
@@ -57,6 +71,13 @@ class CategoryContainer extends Component<CategoryProps, CategoryState> {
       this.update(nextProps);
     }
   }
+  
+  priceFilterChanged(newMaxPrice: number) {
+    const newActiveFilters: ActiveFilters = this.state.activeFilters ? this.state.activeFilters : {};
+    newActiveFilters.price = {
+      max: newMaxPrice
+    }
+  }
 
   render() {
     return (
@@ -64,6 +85,7 @@ class CategoryContainer extends Component<CategoryProps, CategoryState> {
         <div className="row flex-xl-nowrap">
           <FiltersContainer
             filters={this.state.filters}
+            priceFilterChanged={this.priceFilterChanged.bind(this)}
           ></FiltersContainer>
           <ProductsContainer
             key={this.category}

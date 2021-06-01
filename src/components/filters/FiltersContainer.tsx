@@ -7,6 +7,7 @@ import { Filters } from '../../dto/Product/Filters/Filters';
 
 interface FiltersProps {
   filters?: Filters
+  priceFilterChanged(newValue: number): void
 }
 
 class FiltersContainer extends Component<FiltersProps, any> {
@@ -43,6 +44,7 @@ class FiltersContainer extends Component<FiltersProps, any> {
                 min={this.props.filters.prices.min}
                 avg={this.props.filters.prices.avg}
                 max={this.props.filters.prices.max}
+                rangeChanged={this.props.priceFilterChanged.bind(this)}
                 label="Precio"
               />
           </nav>

@@ -24,7 +24,7 @@ class FiltersContainer extends Component<FiltersProps, any> {
     }
 
     renderNavClasses() {
-      const classes = ["col-12", "col-md-3", "col-lg-2", "col-xl-2", "filters-container"];
+      const classes = ["col-12", "filters-container"];
       if (this.state.filtersOpened) classes.push("show");
       return classes.join(" ");
     }
@@ -32,14 +32,18 @@ class FiltersContainer extends Component<FiltersProps, any> {
     render() {
       return this.props.filters ? (
         <div className={this.renderNavClasses()}>
+
           <div className="mobile">
             <span className="label">Filtros</span>
             <Hamburger
                 handleHamburgerClick={this.handleHamburgerClick.bind(this)}
             ></Hamburger>
           </div>
-          <nav className="filters-nav">
+
+          <div className="row flex-xl-nowrap filters-nav">
+
               <Toggle></Toggle>
+
               <CustomRange 
                 min={this.props.filters.prices.min}
                 avg={this.props.filters.prices.avg}
@@ -47,7 +51,7 @@ class FiltersContainer extends Component<FiltersProps, any> {
                 rangeChanged={this.props.priceFilterChanged.bind(this)}
                 label="Precio"
               />
-          </nav>
+          </div>
         </div>
       ) : "";
     }

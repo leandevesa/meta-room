@@ -21,7 +21,7 @@ class ProductsContainer extends Component<ProductsProps> {
         const loader = <div key="loader" className="loader">Loading ...</div>;
 
         return (
-            <div className="col-12 col-md-9 col-lg-10 col-xl-10 py-md-3 pl-md-5 bd-content">
+            <div className="col-12 bd-content">
                 <div className="row">
                     <h3 className="h3">{this.props.title}</h3>
                 </div>

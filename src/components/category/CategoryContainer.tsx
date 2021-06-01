@@ -29,6 +29,7 @@ class CategoryContainer extends Component<CategoryProps, CategoryState> {
 
   private title: string = "";
   private category: string = "";
+  private page: number = 0;
   private categories: Array<Category> = require('../../data/categories.json').categories;
 
   constructor(props: CategoryProps) {
@@ -45,14 +46,22 @@ class CategoryContainer extends Component<CategoryProps, CategoryState> {
     this.title = this.categories.filter(c => c.id === this.category)[0].title;
   }
 
-  loadItems(page: any) {
+  loadItems() {
 
-    page -= 1;
+    let url = `http://localhost:5000/api/products?category=${this.props.category}&page=${this.page}`;
 
-    fetch(`http://localhost:5000/api/products?category=${this.props.category}&page=${page}`)
+    if (this.state.activeFilters) {
+      const activeFilters = this.state.activeFilters;
+      if (activeFilters.price) {
+        url += `&price_max=${activeFilters.price.max}`;
+      }
+    }
+
+    fetch(url)
       .then(res => res.json())
       .then(res => {
         const newProducts = this.state.products.concat(res.products);
+        this.page++;
         this.setState({
           products: newProducts,
           filters: res.filters,
@@ -71,12 +80,19 @@ class CategoryContainer extends Component<CategoryProps, CategoryState> {
       this.update(nextProps);
     }
   }
-  
+
   priceFilterChanged(newMaxPrice: number) {
-    const newActiveFilters: ActiveFilters = this.state.activeFilters ? this.state.activeFilters : {};
-    newActiveFilters.price = {
+    const activeFilters = this.state.activeFilters ? this.state.activeFilters : {};
+    activeFilters.price = {
       max: newMaxPrice
     }
+    this.page = 0;
+    this.setState({
+      activeFilters,
+      products: []
+    });
+    this.loadItems();
+    
   }
 
   render() {
@@ -87,6 +103,8 @@ class CategoryContainer extends Component<CategoryProps, CategoryState> {
             filters={this.state.filters}
             priceFilterChanged={this.priceFilterChanged.bind(this)}
           ></FiltersContainer>
+        </div>
+        <div className="row flex-xl-nowrap">
           <ProductsContainer
             key={this.category}
             category={this.category}

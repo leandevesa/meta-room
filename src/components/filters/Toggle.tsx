@@ -5,7 +5,7 @@ import './Filter.css';
 class Toggle extends Component {
     render() {
       return (
-        <div className="filter">
+        <div className="col-md-2 filter">
             <label className="bd-label">Género:</label>
             <div className="toggle-container">
                 <label className="toggle-label left">M</label>

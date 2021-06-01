@@ -20,11 +20,7 @@ app.get("/api/products", function(req, res) {
 
     const page = req.query.page ? parseInt(req.query.page) : 0;
     const limit = req.query.limit ? parseInt(req.query.limit) : 8;
-    const total = category.products.length;
     const offset = page * limit;
-    const last = (offset + limit) >= total;
-
-    category.products = category.products.slice(offset, offset + limit);
 
     const price_min = req.query.price_min;
     const price_max = req.query.price_max;
@@ -38,6 +34,12 @@ app.get("/api/products", function(req, res) {
                    e.price.now <= max;
         });
     }
+    
+    const total = category.products.length;
+
+    category.products = category.products.slice(offset, offset + limit);
+    
+    const last = (offset + limit) >= total;
 
     res.setHeader('Access-Control-Allow-Origin', "*");
 

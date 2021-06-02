@@ -4,6 +4,7 @@ import CustomRange from './CustomRange';
 import Toggle from './Toggle';
 import Hamburger from './Hamburger';
 import { Filters } from '../../dto/Product/Filters/Filters';
+import CustomSelect from './CustomSelect';
 
 interface FiltersProps {
   filters?: Filters
@@ -49,8 +50,11 @@ class FiltersContainer extends Component<FiltersProps, any> {
                 avg={this.props.filters.prices.avg}
                 max={this.props.filters.prices.max}
                 rangeChanged={this.props.priceFilterChanged.bind(this)}
-                label="Precio"
               />
+
+              <CustomSelect>
+                
+              </CustomSelect>
           </div>
         </div>
       ) : "";

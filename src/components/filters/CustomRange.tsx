@@ -8,7 +8,6 @@ interface RangeProps {
     max: number;
     min: number;
     avg: number;
-    label: string;
     rangeChanged(newValue: number): void
 }
 

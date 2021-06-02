@@ -45,8 +45,13 @@ h3.h3{
     .filters-container.show {
         max-height: 999px;
         transition: max-height 0.25s ease-in;
+        overflow: inherit;
     }
     .filters-container .mobile {
+        display: block;
+    }
+
+    .filters-container .filters-nav {
         display: block;
     }
 }

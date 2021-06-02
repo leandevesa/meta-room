@@ -1,0 +1,17 @@
+{
+    "brands": [
+        {
+            "id": 0,
+            "name": "Malibu Outfitters",
+            "contact": {
+                "address": {
+                    "description": "Humboldt 134",
+                    "geo": {
+                        "lat": -34.59585390098466,
+                        "lon": -58.45122280922692
+                    }
+                }
+            }
+        }
+    ]
+}

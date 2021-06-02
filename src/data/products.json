@@ -17,7 +17,8 @@
                     "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_6312_500x.jpg?v=1548854230",
                     "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_6311-600x737_1024x.jpg?v=1548854207"
                 ],
-                "url": "https://www.malibuoutfitters.com.ar/collections/v-camisas/products/camisa-praga"
+                "url": "https://www.malibuoutfitters.com.ar/collections/v-camisas/products/camisa-praga",
+                "brand": 0
             },
             {
                 "name": "CAMISA ALEX",
@@ -28,7 +29,8 @@
                     "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_6176-600x738_500x.jpg?v=1548854891",
                     "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_6170_1024x.jpg?v=1548854891"
                 ],
-                "url": "https://www.malibuoutfitters.com.ar/collections/v-camisas/products/camisa-alex"
+                "url": "https://www.malibuoutfitters.com.ar/collections/v-camisas/products/camisa-alex",
+                "brand": 0
             },
             {
                 "name": "CAMISA HAWAII",
@@ -39,7 +41,8 @@
                     "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_8131_500x.jpg?v=1549031914",
                     "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_8135_1024x.jpg?v=1549031944"
                 ],
-                "url": "https://www.malibuoutfitters.com.ar/collections/v-camisas/products/camisa-hawaii"
+                "url": "https://www.malibuoutfitters.com.ar/collections/v-camisas/products/camisa-hawaii",
+                "brand": 0
             },
             {
                 "name": "CAMISA DE JEAN MYKONOS",
@@ -50,7 +53,8 @@
                     "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_6222-600x561_500x.jpg?v=1548855002",
                     "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_6225_1024x.jpg?v=1549031577"
                 ],
-                "url": "https://www.malibuoutfitters.com.ar/collections/v-camisas/products/camisa-de-jean-mykonos-1"
+                "url": "https://www.malibuoutfitters.com.ar/collections/v-camisas/products/camisa-de-jean-mykonos-1",
+                "brand": 0
             },
             {
                 "name": "CAMISA MYKONOS",
@@ -61,7 +65,8 @@
                     "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/summer-59_500x.jpg?v=1549032124",
                     "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/summer-58-600x803_1024x.jpg?v=1549032151"
                 ],
-                "url": "https://www.malibuoutfitters.com.ar/collections/v-camisas/products/camisa-mykonos-1"
+                "url": "https://www.malibuoutfitters.com.ar/collections/v-camisas/products/camisa-mykonos-1",
+                "brand": 0
             },
             {
                 "name": "CAMISA LISBOA",
@@ -72,7 +77,8 @@
                     "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/33AAFB18-895C-4F56-8044-C15191666CD0_500x.jpg?v=1549031983",
                     "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/Malibu-46-600x780_1024x.jpg?v=1549032008"
                 ],
-                "url": "https://www.malibuoutfitters.com.ar/collections/v-camisas/products/camisa-lisboa"
+                "url": "https://www.malibuoutfitters.com.ar/collections/v-camisas/products/camisa-lisboa",
+                "brand": 0
             },
             {
                 "name": "CAMPERA DE JEAN ELVIS",
@@ -83,7 +89,8 @@
                     "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_8339_500x.jpg?v=1548854290",
                     "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/img_8345-600x737_1024x.jpg?v=1548854018"
                 ],
-                "url": "https://www.malibuoutfitters.com.ar/collections/v-camisas/products/campera-de-jean-elvis"
+                "url": "https://www.malibuoutfitters.com.ar/collections/v-camisas/products/campera-de-jean-elvis",
+                "brand": 0
             },
             {
                 "name": "CAMISA DE JEAN MYKONOS",
@@ -94,7 +101,8 @@
                     "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_6330_500x.jpg?v=1548855054",
                     "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_6334-1-600x738_1024x.jpg?v=1548853726"
                 ],
-                "url": "https://www.malibuoutfitters.com.ar/collections/v-camisas/products/camisa-de-jean-mykonos"
+                "url": "https://www.malibuoutfitters.com.ar/collections/v-camisas/products/camisa-de-jean-mykonos",
+                "brand": 0
             },
             {
                 "name": "CAMISA MYKONOS",
@@ -105,7 +113,8 @@
                     "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_6010_500x.jpg?v=1548855178",
                     "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_5996-600x737_1024x.jpg?v=1548854002"
                 ],
-                "url": "https://www.malibuoutfitters.com.ar/collections/v-camisas/products/camisa-mykonos"
+                "url": "https://www.malibuoutfitters.com.ar/collections/v-camisas/products/camisa-mykonos",
+                "brand": 0
             }
         ]
     }

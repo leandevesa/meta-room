@@ -59,7 +59,7 @@ app.get("/api/products", function(req, res) {
     if (lat && lon && maxDistanceInKm) {
         category.products = category.products.filter(function(e) {
             // TODO: Optimize to calculate only once per brand
-            const brandGeo = dataBrands.brands[e.brand].contact.address.geo;
+            const brandGeo = dataBrands.brands[e.brand].contact.address.geo; // TODO: only works if id matches array position (no need when optimization done)
             const distanceInKm = distanceInKmBetweenTwoCoordinates(lat, brandGeo.lat, lon, brandGeo.lon);
             return distanceInKm <= maxDistanceInKm;
         });

@@ -9,9 +9,11 @@
                     "geo": {
                         "lat": -34.59585390098466,
                         "lon": -58.45122280922692
-                    }
+                    },
+                    "private": false
                 }
-            }
+            },
+            "has_physical_store": true
         }
     ]
 }

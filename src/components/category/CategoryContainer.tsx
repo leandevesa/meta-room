@@ -16,6 +16,7 @@ interface PriceFilter {
 
 interface ActiveFilters {
   price?: PriceFilter;
+  sort?: string;
 }
 
 interface CategoryState {
@@ -55,6 +56,9 @@ class CategoryContainer extends Component<CategoryProps, CategoryState> {
       if (activeFilters.price) {
         url += `&price_max=${activeFilters.price.max}`;
       }
+      if (activeFilters.sort) {
+        url += `&sort=${activeFilters.sort}`;
+      }
     }
 
     fetch(url)
@@ -65,12 +69,7 @@ class CategoryContainer extends Component<CategoryProps, CategoryState> {
         this.setState({
           products: newProducts,
           filters: res.filters,
-          hasMoreItems: !res.pagination.last,
-          activeFilters: {
-            price: {
-              max: res.filters.prices.max
-            }
-          }
+          hasMoreItems: !res.pagination.last
         });
       });
   }
@@ -82,17 +81,31 @@ class CategoryContainer extends Component<CategoryProps, CategoryState> {
   }
 
   priceFilterChanged(newMaxPrice: number) {
-    const activeFilters = this.state.activeFilters ? this.state.activeFilters : {};
-    activeFilters.price = {
-      max: newMaxPrice
+    const filtersUpdate: ActiveFilters = {
+      price: {
+        max: newMaxPrice
+      }
     }
+    this.handleFiltersChange(filtersUpdate);
+  }
+
+  sortChanged(newSort: string) {
+    const filtersUpdate: ActiveFilters = {
+      sort: newSort
+    }
+    this.handleFiltersChange(filtersUpdate);
+  }
+
+  handleFiltersChange(filterUpdate: ActiveFilters) {
+    const activeFilters = this.state.activeFilters ? 
+      {... this.state.activeFilters, ... filterUpdate} :
+      filterUpdate;
     this.page = 0;
     this.setState({
       activeFilters,
-      products: []
+      products: [],
+      hasMoreItems: true
     });
-    this.loadItems();
-    
   }
 
   render() {
@@ -102,6 +115,7 @@ class CategoryContainer extends Component<CategoryProps, CategoryState> {
           <FiltersContainer
             filters={this.state.filters}
             priceFilterChanged={this.priceFilterChanged.bind(this)}
+            sortChanged={this.sortChanged.bind(this)}
           ></FiltersContainer>
         </div>
         <div className="row flex-xl-nowrap">

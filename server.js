@@ -6,6 +6,14 @@ const root = __dirname;
 console.log("root " + root);
 const data = JSON.parse(fs.readFileSync(root + '/src/data/products.json', 'utf8'));
 
+const sortFunctions = {
+    'cheaper-first': sortCheaper,
+    'expensive-first': sortExpensive,
+    'new-first': sortNew,
+    'old-first': sortOld,
+    'preferred': sortPreferred
+};
+
 app.set("PORT", process.env.PORT || 5000);
 
 app.get("/api", function(req, res) {
@@ -24,9 +32,13 @@ app.get("/api/products", function(req, res) {
 
     const price_min = req.query.price_min;
     const price_max = req.query.price_max;
+    const sortCriteria = req.query.sort || 'cheaper-first';
+    
+    const sortFn = sortFunctions[sortCriteria];
+
+    category.products = category.products.sort(sortFn);
 
     if (price_min || price_max) {
-
         const min = price_min || 0;
         const max = price_max || 99999999;
         category.products = category.products.filter(function(e) {
@@ -61,4 +73,24 @@ app.listen(app.get("PORT"), function() {
 
 function clone(obj) {
     return JSON.parse(JSON.stringify(obj));
+}
+
+function sortCheaper(a, b) {
+    return a.price.now - b.price.now;
+}
+
+function sortExpensive(a, b) {
+    return b.price.now - a.price.now;
+}
+
+function sortNew(a, b) {
+    return 1;; // TODO
+}
+
+function sortOld(a, b) {
+    return 1;; // TODO
+}
+
+function sortPreferred(a, b) {
+    return 1; // TODO
 }

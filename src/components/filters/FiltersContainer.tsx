@@ -9,6 +9,7 @@ import CustomSelect from './CustomSelect';
 interface FiltersProps {
   filters?: Filters
   priceFilterChanged(newValue: number): void
+  sortChanged(newValue: string): void
 }
 
 class FiltersContainer extends Component<FiltersProps, any> {
@@ -42,18 +43,15 @@ class FiltersContainer extends Component<FiltersProps, any> {
           </div>
 
           <div className="row flex-xl-nowrap filters-nav">
-
               <Toggle></Toggle>
-
               <CustomRange 
                 min={this.props.filters.prices.min}
                 avg={this.props.filters.prices.avg}
                 max={this.props.filters.prices.max}
                 rangeChanged={this.props.priceFilterChanged.bind(this)}
               />
-
-              <CustomSelect>
-                
+              <CustomSelect
+                onChange={this.props.sortChanged.bind(this)}>
               </CustomSelect>
           </div>
         </div>

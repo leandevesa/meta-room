@@ -4,11 +4,6 @@ h3.h3{
     color: #666;    
 }
 
-.filters-container {
-    background-color: white;
-    border-right: 1px solid rgba(0,0,0,.1);
-}
-
 .filters-container .mobile {
     margin: 15px;
     text-align: center;

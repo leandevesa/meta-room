@@ -5,6 +5,20 @@
                 "min": 834.00,
                 "avg": 1662.00,
                 "max": 2490.00
+            },
+            "locations": {
+                "states": [
+                    {
+                        "id": 1,
+                        "description": "CABA"
+                    }
+                ],
+                "regions": [
+                    {
+                        "id": 1,
+                        "description": "Palermo"
+                    }
+                ]
             }
         },
         "products": [
@@ -18,19 +32,13 @@
                     "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_6311-600x737_1024x.jpg?v=1548854207"
                 ],
                 "url": "https://www.malibuoutfitters.com.ar/collections/v-camisas/products/camisa-praga",
-                "brand": 0
-            },
-            {
-                "name": "CAMISA ALEX",
-                "price": {
-                    "now": 894.0
-                },
-                "pictures": [
-                    "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_6176-600x738_500x.jpg?v=1548854891",
-                    "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_6170_1024x.jpg?v=1548854891"
-                ],
-                "url": "https://www.malibuoutfitters.com.ar/collections/v-camisas/products/camisa-alex",
-                "brand": 0
+                "shop": {
+                    "id": 0,
+                    "location": {
+                        "state": 1,
+                        "region": 1
+                    }
+                }
             },
             {
                 "name": "CAMISA HAWAII",
@@ -42,7 +50,13 @@
                     "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_8135_1024x.jpg?v=1549031944"
                 ],
                 "url": "https://www.malibuoutfitters.com.ar/collections/v-camisas/products/camisa-hawaii",
-                "brand": 0
+                "shop": {
+                    "id": 0,
+                    "location": {
+                        "state": 1,
+                        "region": 1
+                    }
+                }
             },
             {
                 "name": "CAMISA DE JEAN MYKONOS",
@@ -54,7 +68,13 @@
                     "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_6225_1024x.jpg?v=1549031577"
                 ],
                 "url": "https://www.malibuoutfitters.com.ar/collections/v-camisas/products/camisa-de-jean-mykonos-1",
-                "brand": 0
+                "shop": {
+                    "id": 0,
+                    "location": {
+                        "state": 1,
+                        "region": 1
+                    }
+                }
             },
             {
                 "name": "CAMISA MYKONOS",
@@ -66,7 +86,13 @@
                     "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/summer-58-600x803_1024x.jpg?v=1549032151"
                 ],
                 "url": "https://www.malibuoutfitters.com.ar/collections/v-camisas/products/camisa-mykonos-1",
-                "brand": 0
+                "shop": {
+                    "id": 0,
+                    "location": {
+                        "state": 1,
+                        "region": 1
+                    }
+                }
             },
             {
                 "name": "CAMISA LISBOA",
@@ -78,19 +104,13 @@
                     "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/Malibu-46-600x780_1024x.jpg?v=1549032008"
                 ],
                 "url": "https://www.malibuoutfitters.com.ar/collections/v-camisas/products/camisa-lisboa",
-                "brand": 0
-            },
-            {
-                "name": "CAMPERA DE JEAN ELVIS",
-                "price": {
-                    "now": 2490.0
-                },
-                "pictures": [
-                    "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_8339_500x.jpg?v=1548854290",
-                    "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/img_8345-600x737_1024x.jpg?v=1548854018"
-                ],
-                "url": "https://www.malibuoutfitters.com.ar/collections/v-camisas/products/campera-de-jean-elvis",
-                "brand": 0
+                "shop": {
+                    "id": 0,
+                    "location": {
+                        "state": 1,
+                        "region": 1
+                    }
+                }
             },
             {
                 "name": "CAMISA DE JEAN MYKONOS",
@@ -102,7 +122,13 @@
                     "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_6334-1-600x738_1024x.jpg?v=1548853726"
                 ],
                 "url": "https://www.malibuoutfitters.com.ar/collections/v-camisas/products/camisa-de-jean-mykonos",
-                "brand": 0
+                "shop": {
+                    "id": 0,
+                    "location": {
+                        "state": 1,
+                        "region": 1
+                    }
+                }
             },
             {
                 "name": "CAMISA MYKONOS",
@@ -114,7 +140,13 @@
                     "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_5996-600x737_1024x.jpg?v=1548854002"
                 ],
                 "url": "https://www.malibuoutfitters.com.ar/collections/v-camisas/products/camisa-mykonos",
-                "brand": 0
+                "shop": {
+                    "id": 0,
+                    "location": {
+                        "state": 1,
+                        "region": 1
+                    }
+                }
             }
         ]
     }

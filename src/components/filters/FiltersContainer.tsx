@@ -5,6 +5,7 @@ import Toggle from './Toggle';
 import Hamburger from './Hamburger';
 import { Filters } from '../../dto/Product/Filters/Filters';
 import CustomSelect from './CustomSelect';
+import LocationFilter from './LocationFilter';
 
 interface FiltersProps {
   filters?: Filters
@@ -26,7 +27,7 @@ class FiltersContainer extends Component<FiltersProps, any> {
     }
 
     renderNavClasses() {
-      const classes = ["col-12", "filters-container"];
+      const classes = ["col-md-3", "col-lg-3", "col-xl-2", "filters-container"];
       if (this.state.filtersOpened) classes.push("show");
       return classes.join(" ");
     }
@@ -42,7 +43,7 @@ class FiltersContainer extends Component<FiltersProps, any> {
             ></Hamburger>
           </div>
 
-          <div className="row flex-xl-nowrap filters-nav">
+          <div className="row filters-nav">
               <Toggle></Toggle>
               <CustomRange 
                 min={this.props.filters.prices.min}
@@ -53,6 +54,9 @@ class FiltersContainer extends Component<FiltersProps, any> {
               <CustomSelect
                 onChange={this.props.sortChanged.bind(this)}>
               </CustomSelect>
+              <LocationFilter
+                onChange={this.props.sortChanged.bind(this)}>
+              </LocationFilter>
           </div>
         </div>
       ) : "";

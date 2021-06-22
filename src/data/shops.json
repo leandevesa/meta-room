@@ -1,5 +1,5 @@
 {
-    "brands": [
+    "shops": [
         {
             "id": 0,
             "name": "Malibu Outfitters",
@@ -10,7 +10,11 @@
                         "lat": -34.59585390098466,
                         "lon": -58.45122280922692
                     },
-                    "private": false
+                    "private": false,
+                    "location": {
+                        "state": 1,
+                        "region": 1 
+                    }
                 }
             },
             "has_physical_store": true

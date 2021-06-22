@@ -21,10 +21,7 @@ class ProductsContainer extends Component<ProductsProps> {
         const loader = <div key="loader" className="loader">Loading ...</div>;
 
         return (
-            <div className="col-12 bd-content">
-                <div className="row">
-                    <h3 className="h3">{this.props.title}</h3>
-                </div>
+            <div className="col-md-9 col-lg-9 col-xl-10 bd-content">
                 <InfiniteScroll
                     className="row"
                     pageStart={0}

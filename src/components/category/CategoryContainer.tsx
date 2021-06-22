@@ -54,7 +54,9 @@ class CategoryContainer extends Component<CategoryProps, CategoryState> {
     if (this.state.activeFilters) {
       const activeFilters = this.state.activeFilters;
       if (activeFilters.price) {
-        url += `&price_max=${activeFilters.price.max}`;
+        if (activeFilters.price.max && this.state.filters && this.state.filters.prices.max !== activeFilters.price.max) {
+          url += `&price_max=${activeFilters.price.max}`;
+        }
       }
       if (activeFilters.sort) {
         url += `&sort=${activeFilters.sort}`;
@@ -74,9 +76,9 @@ class CategoryContainer extends Component<CategoryProps, CategoryState> {
       });
   }
 
-  componentWillReceiveProps(nextProps: CategoryProps) {
-    if (nextProps.category !== this.category) {
-      this.update(nextProps);
+  componentDidUpdate(prevProps: CategoryProps) {
+    if (this.props.category !== prevProps.category) {
+      this.resetState();
     }
   }
 
@@ -108,17 +110,30 @@ class CategoryContainer extends Component<CategoryProps, CategoryState> {
     });
   }
 
+  resetState() {
+    this.page = 0;
+    this.setState({
+      activeFilters: undefined,
+      products: [],
+      hasMoreItems: true
+    });
+  }
+
   render() {
     return (
-      <div className="container-fluid">
+      <div className="container category-container">
+        <div className="row">
+          <div className="col-md-3 col-lg-3 col-xl-2"></div>
+          <div className="col-md-9 col-lg-9 col-xl-10">
+            <h3 className="h3">{this.title}</h3>
+          </div>
+        </div>
         <div className="row flex-xl-nowrap">
           <FiltersContainer
             filters={this.state.filters}
             priceFilterChanged={this.priceFilterChanged.bind(this)}
             sortChanged={this.sortChanged.bind(this)}
           ></FiltersContainer>
-        </div>
-        <div className="row flex-xl-nowrap">
           <ProductsContainer
             key={this.category}
             category={this.category}

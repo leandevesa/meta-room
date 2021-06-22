@@ -5,7 +5,7 @@ const fs = require('fs');
 const root = __dirname;
 console.log("root " + root);
 const dataProducts = JSON.parse(fs.readFileSync(root + '/src/data/products.json', 'utf8'));
-const dataBrands = JSON.parse(fs.readFileSync(root + '/src/data/brands.json', 'utf8'));
+const dataShops = JSON.parse(fs.readFileSync(root + '/src/data/shops.json', 'utf8'));
 
 const sortFunctions = {
     'cheaper-first': sortCheaper,
@@ -25,7 +25,20 @@ app.get("/api/products", function(req, res) {
 
     const category_name = req.query.category; // TODO: Validate mandatory query param
 
-    const category = clone(dataProducts[category_name]);
+    const categoryProducts = dataProducts[category_name] || {
+        "products": [],
+        "filters": {
+            "prices": {
+                "min": 0.00,
+                "avg": 0.00,
+                "max": 0.00
+            }
+        }
+    }
+
+    const category = clone(categoryProducts);
+
+    // optional query params
 
     const page = req.query.page ? parseInt(req.query.page) : 0;
     const limit = req.query.limit ? parseInt(req.query.limit) : 8;
@@ -47,7 +60,7 @@ app.get("/api/products", function(req, res) {
 
     if (price_min || price_max) {
         const min = price_min || 0;
-        const max = price_max || 99999999;
+        const max = price_max || 99999999; // TODO: Max const
         category.products = category.products.filter(function(e) {
             return e.price.now >= min &&
                    e.price.now <= max;
@@ -58,9 +71,9 @@ app.get("/api/products", function(req, res) {
 
     if (lat && lon && maxDistanceInKm) {
         category.products = category.products.filter(function(e) {
-            // TODO: Optimize to calculate only once per brand
-            const brandGeo = dataBrands.brands[e.brand].contact.address.geo; // TODO: only works if id matches array position (no need when optimization done)
-            const distanceInKm = distanceInKmBetweenTwoCoordinates(lat, brandGeo.lat, lon, brandGeo.lon);
+            // TODO: Optimize to calculate only once per shop
+            const shopGeo = dataShops.shops[e.shop.id].contact.address.geo; // TODO: only works if id matches array position (no need when optimization done)
+            const distanceInKm = distanceInKmBetweenTwoCoordinates(lat, shopGeo.lat, lon, shopGeo.lon);
             return distanceInKm <= maxDistanceInKm;
         });
     }

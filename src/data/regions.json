@@ -1,0 +1,14 @@
+{
+    "regions": [
+        {
+            "id": 1,
+            "description": "Palermo",
+            "state": 1
+        },
+        {
+            "id": 2,
+            "description": "Vicente Lopez",
+            "state": 2
+        }
+    ]
+}

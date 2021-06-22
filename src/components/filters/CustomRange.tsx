@@ -46,14 +46,14 @@ class CustomRange extends Component<RangeProps, RangeState> {
   
     render() {
         return (
-            <div className="col-md-2 filter">
+            <div className="col-md-12 filter">
                 <label className="bd-label">Precio:</label>
                 <Range 
                     min={this.props.min}
                     max={this.props.max}
                     marks={this.getMarks()}
                     onChange={this.handleValueChange.bind(this)}
-                    defaultValue={this.props.max}
+                    value={this.props.max}
                 />
             </div>
         );

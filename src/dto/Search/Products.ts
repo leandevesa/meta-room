@@ -1,4 +1,4 @@
-import { Filters } from "./Filters/Filters";
+import { Filters } from "./Filters";
 import { Product } from "./Product";
 
 export interface Products {

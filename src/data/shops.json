@@ -1,7 +1,7 @@
 {
     "shops": [
         {
-            "id": 0,
+            "id": "malibu-outfitters",
             "name": "Malibu Outfitters",
             "contact": {
                 "address": {
@@ -12,8 +12,46 @@
                     },
                     "private": false,
                     "location": {
+                        "state": 0,
+                        "region": 0 
+                    }
+                }
+            },
+            "has_physical_store": true
+        },
+        {
+            "id": "mock1-vilo",
+            "name": "Mock 1 (vilo)",
+            "contact": {
+                "address": {
+                    "description": "Ugarte 3017",
+                    "geo": {
+                        "lat": -34.5211859,
+                        "lon": -58.5060674
+                    },
+                    "private": false,
+                    "location": {
                         "state": 1,
                         "region": 1 
+                    }
+                }
+            },
+            "has_physical_store": true
+        },
+        {
+            "id": "mock2-rmejia",
+            "name": "Mock 2 (r.mejia)",
+            "contact": {
+                "address": {
+                    "description": "Jose Gonzalez Castillo 787",
+                    "geo": {
+                        "lat": -34.6455469,
+                        "lon": -58.5560037
+                    },
+                    "private": false,
+                    "location": {
+                        "state": 2,
+                        "region": 2 
                     }
                 }
             },

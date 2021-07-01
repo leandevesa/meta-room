@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './ProductContent.css';
-import { Price } from '../../../dto/Product/Price';
+import { Price } from '../../../dto/Search/Price';
 import { isNullOrUndefined } from 'util';
 
 interface ContentProps {

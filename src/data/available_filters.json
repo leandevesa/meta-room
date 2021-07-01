@@ -1,0 +1,124 @@
+{
+    "available_filters": [
+        {
+            "category_id": "shirts",
+            "type": "PRICE",
+            "meta": {
+                "min": 834.00,
+                "avg": 1662.00,
+                "max": 2490.00
+            }
+        },
+        {
+            "category_id": "shirts",
+            "type": "LOCATION",
+            "meta": {
+                "id": 0,
+                "description": "CABA",
+                "regions": [
+                    {
+                        "id": 0,
+                        "description": "Palermo"
+                    }
+                ]
+            }
+        },
+        {
+            "category_id": "shirts",
+            "type": "LOCATION",
+            "meta": {
+                "id": 1,
+                "description": "GBA - Zona Norte",
+                "regions": [
+                    {
+                        "id": 1,
+                        "description": "Vicente López"
+                    }
+                ]
+            }
+        },
+        {
+            "category_id": "shirts",
+            "type": "LOCATION",
+            "meta": {
+                "id": 2,
+                "description": "GBA - Zona Oeste",
+                "regions": [
+                    {
+                        "id": 2,
+                        "description": "Ramos Mejía"
+                    }
+                ]
+            }
+        },
+        {
+            "category_id": "shirts",
+            "type": "SHOP",
+            "meta": {
+                "id": "malibu-outfitters",
+                "name": "Malibu Outfitters",
+                "contact": {
+                    "address": {
+                        "description": "Humboldt 134",
+                        "geo": {
+                            "lat": -34.59585390098466,
+                            "lon": -58.45122280922692
+                        },
+                        "private": false,
+                        "location": {
+                            "state": 0,
+                            "region": 0
+                        }
+                    }
+                },
+                "has_physical_store": true
+            }
+        },
+        {
+            "category_id": "shirts",
+            "type": "SHOP",
+            "meta": {
+                "id": "mock1-vilo",
+                "name": "Mock 1 (vilo)",
+                "contact": {
+                    "address": {
+                        "description": "Ugarte 3017",
+                        "geo": {
+                            "lat": -34.5211859,
+                            "lon": -58.5060674
+                        },
+                        "private": false,
+                        "location": {
+                            "state": 1,
+                            "region": 1
+                        }
+                    }
+                },
+                "has_physical_store": true
+            }
+        },
+        {
+            "category_id": "shirts",
+            "type": "SHOP",
+            "meta": {
+                "id": "mock2-rmejia",
+                "name": "Mock 2 (r.mejia)",
+                "contact": {
+                    "address": {
+                        "description": "Jose Gonzalez Castillo 787",
+                        "geo": {
+                            "lat": -34.6455469,
+                            "lon": -58.5560037
+                        },
+                        "private": false,
+                        "location": {
+                            "state": 2,
+                            "region": 2
+                        }
+                    }
+                },
+                "has_physical_store": true
+            }
+        }
+    ]
+}

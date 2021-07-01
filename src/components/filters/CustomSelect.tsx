@@ -29,7 +29,7 @@ class CustomSelect extends Component<CustomSelectProps> {
   render() {
     return (
       <div className="col-md-12 filter">
-        <label className="bd-label">Ordenar por:</label>
+        <label className="bd-label">Ordenar por</label>
         <Select options={CustomSelect.options}
                 styles={CustomSelect.selectStyles}
                 defaultValue={CustomSelect.options[0]}

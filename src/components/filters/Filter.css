@@ -11,3 +11,7 @@
 .filter:last-of-type {
     margin-bottom: 20px;
 }
+
+.bd-label {
+    font-weight: 600;
+}

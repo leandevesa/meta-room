@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Select from 'react-select';
 
 interface LocationFilterProps {
-  onChange(newValue: string): void;
+  onChange(states: Array<string>, regions: Array<string>): void;
 }
 
 class LocationFilter extends Component<LocationFilterProps> {
@@ -24,7 +24,7 @@ class LocationFilter extends Component<LocationFilterProps> {
     { value: '4', label:  'San Isidro'}
   ];
 
-  private static groupedOptions = [
+  private static RegionOptions = [
     {
       label: 'CABA',
       options: LocationFilter.CABAOptions,
@@ -42,23 +42,41 @@ class LocationFilter extends Component<LocationFilterProps> {
     })
   };
 
-  valueChanged(s: any) {
-    this.props.onChange(s.value);
+  private statesApplied: Array<string> = [];
+  private regionsApplied: Array<string> = [];
+
+  stateChanged(s: any) {
+    this.statesApplied = s.map(function(i: any) { return i.value });
+  }
+
+  regionChanged(s: any) {
+    this.regionsApplied = s.map(function(i: any) { return i.value });
+  }
+
+  menuClosed() {
+    this.props.onChange(this.statesApplied, this.regionsApplied);
   }
 
   render() {
     return (
       <div className="col-md-12 filter">
-        <label className="bd-label">Ubicación:</label>
+        <label className="bd-label">Ubicación</label>
+        <br></br>
+        <label>Provincia</label>
         <Select options={LocationFilter.StatesOptions}
                 isMulti
-                onChange={this.valueChanged.bind(this)}
+                onChange={this.stateChanged.bind(this)}
+                onMenuClose={this.menuClosed.bind(this)}
+                closeMenuOnSelect={false}
                 placeholder='Provincia' >
         </Select>
         <br></br>
-        <Select options={LocationFilter.groupedOptions}
+        <label>Localidad</label>
+        <Select options={LocationFilter.RegionOptions}
                 isMulti
-                onChange={this.valueChanged.bind(this)}
+                onChange={this.regionChanged.bind(this)}
+                onMenuClose={this.menuClosed.bind(this)}
+                closeMenuOnSelect={false}
                 placeholder='Localidad' >
         </Select>
       </div>

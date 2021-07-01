@@ -1,0 +1,12 @@
+Esta tabla se rearma cuando corre el job
+
+
+    Price:
+        Te traes todos los product de ese category_id, obtenes max, min y avg
+    Location:
+        Te traes todos los product de ese category_id, te obtenes los shop_id
+        Vas a shops y te obtenes los location de todos
+        Vas iterando los location y vas armando un map de "number:array<number>" (state:[regions])"
+        Iteras el map y armas los objetos correspondientes yendo a la tabla de state y regions (y aca podes validar q la region corresponda al state si queres)
+    Shop:
+        Aprovechas lo anterior para armar esto

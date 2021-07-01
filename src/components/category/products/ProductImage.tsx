@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './ProductImage.css';
-import { Flags } from '../../../dto/Product/Flags';
+import { Flags } from '../../../dto/Search/Flags';
 import { isNullOrUndefined } from 'util';
 
 interface ProductImageProps {

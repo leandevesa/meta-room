@@ -1,13 +1,18 @@
 {
     "regions": [
         {
-            "id": 1,
+            "id": 0,
             "description": "Palermo",
+            "state": 0
+        },
+        {
+            "id": 1,
+            "description": "Vicente López",
             "state": 1
         },
         {
             "id": 2,
-            "description": "Vicente Lopez",
+            "description": "Ramos Mejía",
             "state": 2
         }
     ]

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import InfiniteScroll from 'react-infinite-scroller';
 import Product from './Product';
-import { Product as ProductDTO } from '../../../dto/Product/Product';
+import { Product as ProductDTO } from '../../../dto/Search/Product';
 
 interface ProductsProps {
     category: string;

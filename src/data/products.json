@@ -1,153 +1,95 @@
 {
-    "shirts": {
-        "filters": {
-            "prices": {
-                "min": 834.00,
-                "avg": 1662.00,
-                "max": 2490.00
+    "products": [
+        {
+            "name": "CAMISA PRAGA",
+            "price": {
+                "now": 1134.0
             },
-            "locations": {
-                "states": [
-                    {
-                        "id": 1,
-                        "description": "CABA"
-                    }
-                ],
-                "regions": [
-                    {
-                        "id": 1,
-                        "description": "Palermo"
-                    }
-                ]
-            }
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_6312_500x.jpg?v=1548854230",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_6311-600x737_1024x.jpg?v=1548854207"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/v-camisas/products/camisa-praga",
+            "shop_id": "malibu-outfitters",
+            "category_id": "shirts"
         },
-        "products": [
-            {
-                "name": "CAMISA PRAGA",
-                "price": {
-                    "now": 1134.0
-                },
-                "pictures": [
-                    "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_6312_500x.jpg?v=1548854230",
-                    "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_6311-600x737_1024x.jpg?v=1548854207"
-                ],
-                "url": "https://www.malibuoutfitters.com.ar/collections/v-camisas/products/camisa-praga",
-                "shop": {
-                    "id": 0,
-                    "location": {
-                        "state": 1,
-                        "region": 1
-                    }
-                }
+        {
+            "name": "CAMISA HAWAII",
+            "price": {
+                "now": 1134.0
             },
-            {
-                "name": "CAMISA HAWAII",
-                "price": {
-                    "now": 1134.0
-                },
-                "pictures": [
-                    "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_8131_500x.jpg?v=1549031914",
-                    "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_8135_1024x.jpg?v=1549031944"
-                ],
-                "url": "https://www.malibuoutfitters.com.ar/collections/v-camisas/products/camisa-hawaii",
-                "shop": {
-                    "id": 0,
-                    "location": {
-                        "state": 1,
-                        "region": 1
-                    }
-                }
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_8131_500x.jpg?v=1549031914",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_8135_1024x.jpg?v=1549031944"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/v-camisas/products/camisa-hawaii",
+            "shop_id": "malibu-outfitters",
+            "category_id": "shirts"
+        },
+        {
+            "name": "CAMISA DE JEAN MYKONOS",
+            "price": {
+                "now": 834.0
             },
-            {
-                "name": "CAMISA DE JEAN MYKONOS",
-                "price": {
-                    "now": 834.0
-                },
-                "pictures": [
-                    "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_6222-600x561_500x.jpg?v=1548855002",
-                    "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_6225_1024x.jpg?v=1549031577"
-                ],
-                "url": "https://www.malibuoutfitters.com.ar/collections/v-camisas/products/camisa-de-jean-mykonos-1",
-                "shop": {
-                    "id": 0,
-                    "location": {
-                        "state": 1,
-                        "region": 1
-                    }
-                }
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_6222-600x561_500x.jpg?v=1548855002",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_6225_1024x.jpg?v=1549031577"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/v-camisas/products/camisa-de-jean-mykonos-1",
+            "shop_id": "mock1-vilo",
+            "category_id": "shirts"
+        },
+        {
+            "name": "CAMISA MYKONOS",
+            "price": {
+                "now": 894.0
             },
-            {
-                "name": "CAMISA MYKONOS",
-                "price": {
-                    "now": 894.0
-                },
-                "pictures": [
-                    "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/summer-59_500x.jpg?v=1549032124",
-                    "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/summer-58-600x803_1024x.jpg?v=1549032151"
-                ],
-                "url": "https://www.malibuoutfitters.com.ar/collections/v-camisas/products/camisa-mykonos-1",
-                "shop": {
-                    "id": 0,
-                    "location": {
-                        "state": 1,
-                        "region": 1
-                    }
-                }
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/summer-59_500x.jpg?v=1549032124",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/summer-58-600x803_1024x.jpg?v=1549032151"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/v-camisas/products/camisa-mykonos-1",
+            "shop_id": "mock2-rmejia",
+            "category_id": "shirts"
+        },
+        {
+            "name": "CAMISA LISBOA",
+            "price": {
+                "now": 1134.0
             },
-            {
-                "name": "CAMISA LISBOA",
-                "price": {
-                    "now": 1134.0
-                },
-                "pictures": [
-                    "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/33AAFB18-895C-4F56-8044-C15191666CD0_500x.jpg?v=1549031983",
-                    "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/Malibu-46-600x780_1024x.jpg?v=1549032008"
-                ],
-                "url": "https://www.malibuoutfitters.com.ar/collections/v-camisas/products/camisa-lisboa",
-                "shop": {
-                    "id": 0,
-                    "location": {
-                        "state": 1,
-                        "region": 1
-                    }
-                }
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/33AAFB18-895C-4F56-8044-C15191666CD0_500x.jpg?v=1549031983",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/Malibu-46-600x780_1024x.jpg?v=1549032008"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/v-camisas/products/camisa-lisboa",
+            "shop_id": "malibu-outfitters",
+            "category_id": "shirts"
+        },
+        {
+            "name": "CAMISA DE JEAN MYKONOS",
+            "price": {
+                "now": 834.0
             },
-            {
-                "name": "CAMISA DE JEAN MYKONOS",
-                "price": {
-                    "now": 834.0
-                },
-                "pictures": [
-                    "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_6330_500x.jpg?v=1548855054",
-                    "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_6334-1-600x738_1024x.jpg?v=1548853726"
-                ],
-                "url": "https://www.malibuoutfitters.com.ar/collections/v-camisas/products/camisa-de-jean-mykonos",
-                "shop": {
-                    "id": 0,
-                    "location": {
-                        "state": 1,
-                        "region": 1
-                    }
-                }
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_6330_500x.jpg?v=1548855054",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_6334-1-600x738_1024x.jpg?v=1548853726"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/v-camisas/products/camisa-de-jean-mykonos",
+            "shop_id": "malibu-outfitters",
+            "category_id": "shirts"
+        },
+        {
+            "name": "CAMISA MYKONOS",
+            "price": {
+                "now": 894.0
             },
-            {
-                "name": "CAMISA MYKONOS",
-                "price": {
-                    "now": 894.0
-                },
-                "pictures": [
-                    "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_6010_500x.jpg?v=1548855178",
-                    "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_5996-600x737_1024x.jpg?v=1548854002"
-                ],
-                "url": "https://www.malibuoutfitters.com.ar/collections/v-camisas/products/camisa-mykonos",
-                "shop": {
-                    "id": 0,
-                    "location": {
-                        "state": 1,
-                        "region": 1
-                    }
-                }
-            }
-        ]
-    }
+            "pictures": [
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_6010_500x.jpg?v=1548855178",
+                "https://cdn.shopify.com/s/files/1/0063/4997/9701/products/IMG_5996-600x737_1024x.jpg?v=1548854002"
+            ],
+            "url": "https://www.malibuoutfitters.com.ar/collections/v-camisas/products/camisa-mykonos",
+            "shop_id": "malibu-outfitters",
+            "category_id": "shirts"
+        }
+    ]
 }

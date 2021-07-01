@@ -3,7 +3,7 @@ import './FiltersContainer.css';
 import CustomRange from './CustomRange';
 import Toggle from './Toggle';
 import Hamburger from './Hamburger';
-import { Filters } from '../../dto/Product/Filters/Filters';
+import { Filters } from '../../dto/Search/Filters';
 import CustomSelect from './CustomSelect';
 import LocationFilter from './LocationFilter';
 
@@ -11,6 +11,7 @@ interface FiltersProps {
   filters?: Filters
   priceFilterChanged(newValue: number): void
   sortChanged(newValue: string): void
+  locationFilterChanged(states: Array<string>, regions: Array<string>): void
 }
 
 class FiltersContainer extends Component<FiltersProps, any> {
@@ -33,7 +34,10 @@ class FiltersContainer extends Component<FiltersProps, any> {
     }
   
     render() {
-      return this.props.filters ? (
+
+      const availableFilters = (this.props.filters && this.props.filters.available) ? this.props.filters : undefined; 
+
+      return availableFilters ? (
         <div className={this.renderNavClasses()}>
 
           <div className="mobile">
@@ -46,16 +50,16 @@ class FiltersContainer extends Component<FiltersProps, any> {
           <div className="row filters-nav">
               <Toggle></Toggle>
               <CustomRange 
-                min={this.props.filters.prices.min}
-                avg={this.props.filters.prices.avg}
-                max={this.props.filters.prices.max}
+                min={availableFilters.available.prices.min}
+                avg={availableFilters.available.prices.avg}
+                max={availableFilters.available.prices.max}
                 rangeChanged={this.props.priceFilterChanged.bind(this)}
               />
               <CustomSelect
                 onChange={this.props.sortChanged.bind(this)}>
               </CustomSelect>
               <LocationFilter
-                onChange={this.props.sortChanged.bind(this)}>
+                onChange={this.props.locationFilterChanged.bind(this)}>
               </LocationFilter>
           </div>
         </div>

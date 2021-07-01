@@ -3,27 +3,19 @@ import './CategoryContainer.css';
 import ProductsContainer from './products/ProductsContainer';
 import { Category } from '../../dto/Category';
 import FiltersContainer from '../filters/FiltersContainer';
-import { Product as ProductDTO } from '../../dto/Product/Product';
-import { Filters as FiltersDTO } from '../../dto/Product/Filters/Filters';
+import { ApplicableFilters } from '../../dto/Search/Filters/Applicable/ApplicableFilters';
+import { SearchResponse } from '../../dto/Search/SearchResponse';
+import { Product } from '../../dto/Search/Product';
+import { Filters } from '../../dto/Search/Filters';
 
 interface CategoryProps {
   category: string;
 }
 
-interface PriceFilter {
-  max: number;
-}
-
-interface ActiveFilters {
-  price?: PriceFilter;
-  sort?: string;
-}
-
 interface CategoryState {
-  products: Array<ProductDTO>;
+  products: Array<Product>;
+  filters?: Filters;
   hasMoreItems: boolean;
-  filters?: FiltersDTO;
-  activeFilters?: ActiveFilters;
 }
 
 class CategoryContainer extends Component<CategoryProps, CategoryState> {
@@ -49,31 +41,55 @@ class CategoryContainer extends Component<CategoryProps, CategoryState> {
 
   loadItems() {
 
-    let url = `http://localhost:5000/api/products?category=${this.props.category}&page=${this.page}`;
+    let url = `http://localhost:5000/api/search?category=${this.props.category}&page=${this.page}`;
 
-    if (this.state.activeFilters) {
-      const activeFilters = this.state.activeFilters;
-      if (activeFilters.price) {
-        if (activeFilters.price.max && this.state.filters && this.state.filters.prices.max !== activeFilters.price.max) {
-          url += `&price_max=${activeFilters.price.max}`;
+    if (this.state.filters && this.state.filters.applied && this.state.filters.available) {
+
+      const appliedFilters = this.state.filters.applied;
+      const availableFilters = this.state.filters.available;
+
+      if (appliedFilters.prices) {
+        if (appliedFilters.prices.max && appliedFilters.prices.max !== availableFilters.prices.max) {
+          url += `&price_max=${appliedFilters.prices.max}`;
         }
       }
-      if (activeFilters.sort) {
-        url += `&sort=${activeFilters.sort}`;
+
+      if (appliedFilters.sort) {
+        url += `&sort=${appliedFilters.sort}`;
+      }
+
+      if (appliedFilters.states && appliedFilters.states.length) {
+        const joinedStates = appliedFilters.states.join(",");
+        url += `&states=${joinedStates}`;
+      }
+
+      if (appliedFilters.regions && appliedFilters.regions.length) {
+        const joinedRegions = appliedFilters.regions.join(",");
+        url += `&regions=${joinedRegions}`;
       }
     }
 
     fetch(url)
       .then(res => res.json())
-      .then(res => {
-        const newProducts = this.state.products.concat(res.products);
+      .then((res: SearchResponse) => {
+
+        const allProducts = this.concatenateProducts(res.products);
+
         this.page++;
+
         this.setState({
-          products: newProducts,
-          filters: res.filters,
-          hasMoreItems: !res.pagination.last
+          products: allProducts,
+          hasMoreItems: !res.pagination.last,
+          filters: res.filters
         });
       });
+  }
+
+  concatenateProducts(newProducts: Array<Product>): Array<Product> {
+
+    const oldProducts = this.state.products ? this.state.products : [];
+
+    return oldProducts.concat(newProducts);
   }
 
   componentDidUpdate(prevProps: CategoryProps) {
@@ -83,8 +99,8 @@ class CategoryContainer extends Component<CategoryProps, CategoryState> {
   }
 
   priceFilterChanged(newMaxPrice: number) {
-    const filtersUpdate: ActiveFilters = {
-      price: {
+    const filtersUpdate: ApplicableFilters = {
+      prices: {
         max: newMaxPrice
       }
     }
@@ -92,19 +108,34 @@ class CategoryContainer extends Component<CategoryProps, CategoryState> {
   }
 
   sortChanged(newSort: string) {
-    const filtersUpdate: ActiveFilters = {
+    const filtersUpdate: ApplicableFilters = {
       sort: newSort
     }
     this.handleFiltersChange(filtersUpdate);
   }
 
-  handleFiltersChange(filterUpdate: ActiveFilters) {
-    const activeFilters = this.state.activeFilters ? 
-      {... this.state.activeFilters, ... filterUpdate} :
+  locationFilterChanged(statesApplied: Array<string>, regionsApplied: Array<string>) {
+    const filtersUpdate: ApplicableFilters = {
+      regions: regionsApplied,
+      states: statesApplied,
+    }
+    this.handleFiltersChange(filtersUpdate);
+  }
+
+  handleFiltersChange(filterUpdate: ApplicableFilters) {
+    
+    const appliedFilters = (this.state.filters && this.state.filters.applied) ?
+      { ...this.state.filters.applied, ...filterUpdate } :
       filterUpdate;
+    
+    const filters = this.state.filters ? 
+      { ...this.state.filters, appliedFilters } :
+      undefined;
+
     this.page = 0;
+    
     this.setState({
-      activeFilters,
+      filters,
       products: [],
       hasMoreItems: true
     });
@@ -113,7 +144,7 @@ class CategoryContainer extends Component<CategoryProps, CategoryState> {
   resetState() {
     this.page = 0;
     this.setState({
-      activeFilters: undefined,
+      filters: undefined,
       products: [],
       hasMoreItems: true
     });
@@ -132,6 +163,7 @@ class CategoryContainer extends Component<CategoryProps, CategoryState> {
           <FiltersContainer
             filters={this.state.filters}
             priceFilterChanged={this.priceFilterChanged.bind(this)}
+            locationFilterChanged={this.locationFilterChanged.bind(this)}
             sortChanged={this.sortChanged.bind(this)}
           ></FiltersContainer>
           <ProductsContainer

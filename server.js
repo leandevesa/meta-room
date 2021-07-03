@@ -20,11 +20,11 @@ const sortFunctions = {
 
 app.set("PORT", process.env.PORT || 5000);
 
-app.get("/api", function(req, res) {
+app.get("/api", function (req, res) {
     res.send("Hello, world!");
 });
 
-app.get("/api/search", function(req, res) {
+app.get("/api/search", function (req, res) {
 
     const categoryId = req.query.category; // TODO: Validate mandatory query param
 
@@ -39,8 +39,8 @@ app.get("/api/search", function(req, res) {
     const lat = req.query.lat;
     const lon = req.query.lon;
     const maxDistanceInKm = req.query.distance_km;
-    const selectedStatesIds = req.query.states ? req.query.states.split(",") : [];
-    const selectedRegionsIds = req.query.regions ? req.query.regions.split(",") : [];
+    const selectedStatesIds = req.query.states ? req.query.states.split(",").map(s => parseInt(s, 10)) : [];
+    const selectedRegionsIds = req.query.regions ? req.query.regions.split(",").map(s => parseInt(s, 10)) : [];
     const sortCriteria = req.query.sort || 'cheaper-first';
 
     // 1st -> sort
@@ -56,16 +56,18 @@ app.get("/api/search", function(req, res) {
     // 3rd -> filter shops
     // a -> state & region
 
+    const validSelectedRegionsIds = getValidSelectedRegionsIds(availableFilters.locations, selectedRegionsIds);
+
     const filteredShopIds = availableFilters.shops
-                                          .filter(s => {
-                                            if (!selectedStatesIds.length) return true;
-                                            return selectedStatesIds.includes(s.contact.address.location.state);
-                                          })
-                                          .filter(s => {
-                                            if (!selectedRegionsIds.length) return true;
-                                            return selectedRegionsIds.includes(s.contact.address.location.region);
-                                          })
-                                          .map(s => s.id);
+        .filter(s => {
+            if (!selectedStatesIds.length) return true;
+            return selectedStatesIds.includes(s.contact.address.location.state);
+        })
+        .filter(s => {
+            if (!validSelectedRegionsIds.length) return true;
+            return validSelectedRegionsIds.includes(s.contact.address.location.region);
+        })
+        .map(s => s.id);
 
 
     // b -> geo
@@ -91,18 +93,20 @@ app.get("/api/search", function(req, res) {
     if (priceMin || priceMax) {
         const min = priceMin || 0;
         const max = priceMax || 99999999; // TODO: Max const
-        categoryProducts = categoryProducts.filter(function(e) {
+        categoryProducts = categoryProducts.filter(function (e) {
             return e.price.now >= min &&
-                   e.price.now <= max;
+                e.price.now <= max;
         });
     }
 
     // 4th -> paginate
-    
+
     const total = categoryProducts.length;
     const offset = page * limit;
     categoryProducts = categoryProducts.slice(offset, offset + limit);
     const last = (offset + limit) >= total;
+
+    // 5th -> send response
 
     res.setHeader('Access-Control-Allow-Origin', "*");
 
@@ -123,7 +127,7 @@ app.get("/api/search", function(req, res) {
     res.send(response);
 });
 
-app.listen(app.get("PORT"), function() {
+app.listen(app.get("PORT"), function () {
     console.log("API running");
 });
 
@@ -153,15 +157,15 @@ function sortPreferred(a, b) {
 
 function distanceInKmBetweenTwoCoordinates(lat1, lat2, lon1, lon2) {
     const R = 6371e3; // metres
-    const φ1 = lat1 * Math.PI/180; // φ, λ in radians
-    const φ2 = lat2 * Math.PI/180;
-    const Δφ = (lat2-lat1) * Math.PI/180;
-    const Δλ = (lon2-lon1) * Math.PI/180;
+    const φ1 = lat1 * Math.PI / 180; // φ, λ in radians
+    const φ2 = lat2 * Math.PI / 180;
+    const Δφ = (lat2 - lat1) * Math.PI / 180;
+    const Δλ = (lon2 - lon1) * Math.PI / 180;
 
-    const a = Math.sin(Δφ/2) * Math.sin(Δφ/2) +
-            Math.cos(φ1) * Math.cos(φ2) *
-            Math.sin(Δλ/2) * Math.sin(Δλ/2);
-    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+    const a = Math.sin(Δφ / 2) * Math.sin(Δφ / 2) +
+        Math.cos(φ1) * Math.cos(φ2) *
+        Math.sin(Δλ / 2) * Math.sin(Δλ / 2);
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 
     const d = R * c; // in metres
 
@@ -169,39 +173,45 @@ function distanceInKmBetweenTwoCoordinates(lat1, lat2, lon1, lon2) {
 }
 
 function getCategoryProducts(categoryId) {
-    return dataProducts.products.filter(p => p.category_id === categoryId);
+    return clone(dataProducts).products.filter(p => p.category_id === categoryId);
+}
+
+// Filters regions that are not available
+function getValidSelectedRegionsIds(availableLocations, selectedRegionsIds) {
+    const availableRegionsIds = availableLocations.map(l => l.regions.map(r => r.id));
+    return selectedRegionsIds.filter(r => availableRegionsIds.includes(r));
 }
 
 function getAvailableFilters(categoryId, selectedStatesIds) {
 
-    const dataCategoryAvailableFilters = dataAvailableFilters.available_filters
-                                                             .filter(f => f.category_id === categoryId);
+    const dataCategoryAvailableFilters = clone(dataAvailableFilters).available_filters
+        .filter(f => f.category_id === categoryId);
 
     // TODO: Optimize, query by category_id && type === 'PRICE'
 
     const prices = dataCategoryAvailableFilters.filter(f => f.type === "PRICE")
-                                               .map(f => f.meta)[0]; // TODO: Validate que exista
+        .map(f => f.meta)[0]; // TODO: Validate que exista
 
     // Get available locations, hiding regions that dont apply for selected states
 
     // TODO: Optimize, query by category_id && type === 'LOCATION'
 
     const locations = dataCategoryAvailableFilters.filter(f => f.type === "LOCATION")
-                                                  .map(f => {
+        .map(f => {
 
-                                                      const state = f.meta;
+            const state = f.meta;
 
-                                                      if (selectedStatesIds.length && selectedStatesIds.includes(state.id)) {
-                                                        state.regions = [];
-                                                      }
+            if (selectedStatesIds.length && !selectedStatesIds.includes(state.id)) {
+                state.regions = [];
+            }
 
-                                                      return state;
-                                                   }); // TODO: Validate que haya al menos 1
+            return state;
+        }); // TODO: Validate que haya al menos 1
 
     // TODO: Optimize, query by category_id && type === 'SHOP'
 
     const shops = dataCategoryAvailableFilters.filter(f => f.type === "SHOP")
-                                              .map(f => f.meta);
+        .map(f => f.meta);
 
     return {
         prices,

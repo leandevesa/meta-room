@@ -1,60 +1,75 @@
 import React, { Component } from 'react';
 import Select from 'react-select';
+import { StateLocation } from '../../dto/Search/Filters/Available/StateLocation';
 
 interface LocationFilterProps {
+  locations: Array<StateLocation>;
   onChange(states: Array<string>, regions: Array<string>): void;
 }
 
-class LocationFilter extends Component<LocationFilterProps> {
+interface LocationFilterState {
+  statesOptions: Array<any>;
+  regionsOptions: Array<any>;
+}
 
-  private static StatesOptions = [
-    { value: '1', label:  'CABA'},
-    { value: '2', label:  'GBA - Zona Norte'},
-    { value: '3', label:  'GBA - Zona Sur'},
-    { value: '4', label:  'GBA - Zona Oeste'}
-  ];
-
-  private static CABAOptions = [
-    { value: '1', label:  'Palermo'},
-    { value: '2', label:  'Caballito'}
-  ];
-
-  private static GBAZNOptions = [
-    { value: '3', label:  'Vicente López'},
-    { value: '4', label:  'San Isidro'}
-  ];
-
-  private static RegionOptions = [
-    {
-      label: 'CABA',
-      options: LocationFilter.CABAOptions,
-    },
-    {
-      label: 'GBA - Zona Norte',
-      options: LocationFilter.GBAZNOptions,
-    },
-  ];
-
-  private static selectStyles = {
-    container: (base: any, state: any) => ({
-      ...base,
-      zIndex: "999"
-    })
-  };
+class LocationFilter extends Component<LocationFilterProps, LocationFilterState> {
 
   private statesApplied: Array<string> = [];
   private regionsApplied: Array<string> = [];
+  private thereAreChanges: boolean = false;
+
+  constructor(props: LocationFilterProps) {
+    super(props);
+    this.state = LocationFilter.transformPropsToSelectValues(props);
+  }
 
   stateChanged(s: any) {
+    const previousStatesApplied = this.statesApplied;
     this.statesApplied = s.map(function(i: any) { return i.value });
+    this.thereAreChanges = this.thereAreChanges || (previousStatesApplied !== this.statesApplied);
   }
 
   regionChanged(s: any) {
+    const previousRegionsApplied = this.regionsApplied;
     this.regionsApplied = s.map(function(i: any) { return i.value });
+    this.thereAreChanges = this.thereAreChanges || (previousRegionsApplied !== this.regionsApplied);
   }
 
   menuClosed() {
-    this.props.onChange(this.statesApplied, this.regionsApplied);
+    if (this.thereAreChanges) {
+      this.props.onChange(this.statesApplied, this.regionsApplied)
+      this.thereAreChanges = false;
+    };
+  }
+
+  static getDerivedStateFromProps(props: LocationFilterProps) {
+    return LocationFilter.transformPropsToSelectValues(props);
+  }
+
+  static transformPropsToSelectValues(props: LocationFilterProps) {
+    const statesOptions = props.locations.map(s => {
+      return {
+        value: s.id.toString(),
+        label: s.description
+      }
+    });
+
+    const regionsOptions = props.locations.map(s => {
+      return {
+        label: s.description,
+        options: s.regions.map(r => {
+          return {
+            value: r.id.toString(),
+            label: r.description
+          }
+        })
+      }
+    })
+
+    return {
+      statesOptions,
+      regionsOptions
+    }
   }
 
   render() {
@@ -63,7 +78,7 @@ class LocationFilter extends Component<LocationFilterProps> {
         <label className="bd-label">Ubicación</label>
         <br></br>
         <label>Provincia</label>
-        <Select options={LocationFilter.StatesOptions}
+        <Select options={this.state.statesOptions}
                 isMulti
                 onChange={this.stateChanged.bind(this)}
                 onMenuClose={this.menuClosed.bind(this)}
@@ -72,7 +87,7 @@ class LocationFilter extends Component<LocationFilterProps> {
         </Select>
         <br></br>
         <label>Localidad</label>
-        <Select options={LocationFilter.RegionOptions}
+        <Select options={this.state.regionsOptions}
                 isMulti
                 onChange={this.regionChanged.bind(this)}
                 onMenuClose={this.menuClosed.bind(this)}

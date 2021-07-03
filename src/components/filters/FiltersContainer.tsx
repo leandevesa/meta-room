@@ -14,6 +14,10 @@ interface FiltersProps {
   locationFilterChanged(states: Array<string>, regions: Array<string>): void
 }
 
+enum FilterType {
+  PRICE, SORT, LOCATION
+}
+
 class FiltersContainer extends Component<FiltersProps, any> {
 
     constructor(props: FiltersProps) {
@@ -32,6 +36,21 @@ class FiltersContainer extends Component<FiltersProps, any> {
       if (this.state.filtersOpened) classes.push("show");
       return classes.join(" ");
     }
+
+    filterChanged(filterType: FilterType, ...args:any[]) {
+      
+      switch (filterType) {
+        case FilterType.PRICE:
+          this.props.priceFilterChanged(args[0]);
+          break;
+        case FilterType.SORT:
+          this.props.sortChanged(args[0]);
+          break;
+        case FilterType.LOCATION:
+          this.props.locationFilterChanged(args[0], args[1]);
+          break;
+      }
+    }
   
     render() {
 
@@ -48,18 +67,23 @@ class FiltersContainer extends Component<FiltersProps, any> {
           </div>
 
           <div className="row filters-nav">
+
               <Toggle></Toggle>
+
               <CustomRange 
                 min={availableFilters.available.prices.min}
                 avg={availableFilters.available.prices.avg}
                 max={availableFilters.available.prices.max}
-                rangeChanged={this.props.priceFilterChanged.bind(this)}
+                rangeChanged={(r) => this.filterChanged(FilterType.PRICE, r) }
               />
+
               <CustomSelect
-                onChange={this.props.sortChanged.bind(this)}>
+                onChange={(r) => this.filterChanged(FilterType.SORT, r) }>
               </CustomSelect>
+              
               <LocationFilter
-                onChange={this.props.locationFilterChanged.bind(this)}>
+                locations={availableFilters.available.locations}
+                onChange={(r, s) => this.filterChanged(FilterType.LOCATION, r, s) }>
               </LocationFilter>
           </div>
         </div>

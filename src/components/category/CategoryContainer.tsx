@@ -124,12 +124,12 @@ class CategoryContainer extends Component<CategoryProps, CategoryState> {
 
   handleFiltersChange(filterUpdate: ApplicableFilters) {
     
-    const appliedFilters = (this.state.filters && this.state.filters.applied) ?
+    const applied = (this.state.filters && this.state.filters.applied) ?
       { ...this.state.filters.applied, ...filterUpdate } :
       filterUpdate;
     
     const filters = this.state.filters ? 
-      { ...this.state.filters, appliedFilters } :
+      { ...this.state.filters, applied } :
       undefined;
 
     this.page = 0;

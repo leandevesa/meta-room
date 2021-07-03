@@ -1,7 +1,7 @@
 {
     "products": [
         {
-            "name": "CAMISA PRAGA",
+            "name": "CAMISA PRAGA (palermo)",
             "price": {
                 "now": 1134.0
             },
@@ -14,7 +14,7 @@
             "category_id": "shirts"
         },
         {
-            "name": "CAMISA HAWAII",
+            "name": "CAMISA HAWAII (palermo)",
             "price": {
                 "now": 1134.0
             },
@@ -27,7 +27,7 @@
             "category_id": "shirts"
         },
         {
-            "name": "CAMISA DE JEAN MYKONOS",
+            "name": "CAMISA DE JEAN MYKONOS (vilo)",
             "price": {
                 "now": 834.0
             },
@@ -40,7 +40,7 @@
             "category_id": "shirts"
         },
         {
-            "name": "CAMISA MYKONOS",
+            "name": "CAMISA MYKONOS (rmejia)",
             "price": {
                 "now": 894.0
             },
@@ -53,7 +53,7 @@
             "category_id": "shirts"
         },
         {
-            "name": "CAMISA LISBOA",
+            "name": "CAMISA LISBOA (palermo)",
             "price": {
                 "now": 1134.0
             },
@@ -66,7 +66,7 @@
             "category_id": "shirts"
         },
         {
-            "name": "CAMISA DE JEAN MYKONOS",
+            "name": "CAMISA DE JEAN MYKONOS (palermo)",
             "price": {
                 "now": 834.0
             },
@@ -79,7 +79,7 @@
             "category_id": "shirts"
         },
         {
-            "name": "CAMISA MYKONOS",
+            "name": "CAMISA MYKONOS (palermo)",
             "price": {
                 "now": 894.0
             },

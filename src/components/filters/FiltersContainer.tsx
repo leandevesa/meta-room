@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import './FiltersContainer.css';
 import CustomRange from './CustomRange';
 import Toggle from './Toggle';
@@ -19,76 +19,67 @@ enum FilterType {
   PRICE, SORT, LOCATION
 }
 
-class FiltersContainer extends Component<FiltersProps, any> {
+function FiltersContainer(props: FiltersProps) {
 
-    constructor(props: FiltersProps) {
-      super(props);
-      this.state = {
-          filtersOpened: false
-      }
-    }
+    const [filtersOpened, setFiltersOpened] = useState(false);
+    const availableFilters = (props.filters && props.filters.available) ? props.filters : undefined; 
 
-    handleHamburgerClick(filtersOpened: boolean) {
-      this.setState({filtersOpened: filtersOpened});
-    }
+    return availableFilters ? (
+      <div className={renderNavClasses(filtersOpened)}>
 
-    renderNavClasses() {
-      const classes = ["col-md-3", "col-lg-3", "col-xl-2", "filters-container"];
-      if (this.state.filtersOpened) classes.push("show");
-      return classes.join(" ");
-    }
-
-    filterChanged(filterType: FilterType, ...args:any[]) {
-      switch (filterType) {
-        case FilterType.PRICE:
-          this.props.priceFilterChanged(args[0]);
-          break;
-        case FilterType.SORT:
-          this.props.sortChanged(args[0]);
-          break;
-        case FilterType.LOCATION:
-          this.props.locationFilterChanged(args[0], args[1]);
-          break;
-      }
-    }
-  
-    render() {
-
-      const availableFilters = (this.props.filters && this.props.filters.available) ? this.props.filters : undefined; 
-
-      return availableFilters ? (
-        <div className={this.renderNavClasses()}>
-
-          <div className="mobile">
-            <span className="label">Filtros</span>
-            <Hamburger
-                handleHamburgerClick={this.handleHamburgerClick.bind(this)}
-            ></Hamburger>
-          </div>
-
-          <div className="row filters-nav">
-
-              <Toggle></Toggle>
-
-              <CustomRange 
-                min={availableFilters.available.prices.min}
-                avg={availableFilters.available.prices.avg}
-                max={availableFilters.available.prices.max}
-                rangeChanged={(r) => this.filterChanged(FilterType.PRICE, r) }
-              />
-
-              <CustomSelect
-                onChange={(r) => this.filterChanged(FilterType.SORT, r) }>
-              </CustomSelect>
-              
-              <LocationFilter
-                locations={availableFilters.available.locations}
-                onChange={(r, s) => this.filterChanged(FilterType.LOCATION, r, s) }>
-              </LocationFilter>
-          </div>
+        <div className="mobile">
+          <span className="label">Filtros</span>
+          <Hamburger
+              handleHamburgerClick={(value) => handleHamburgerClick(setFiltersOpened, value)}
+          ></Hamburger>
         </div>
-      ) : "";
-    }
+
+        <div className="row filters-nav">
+
+            <Toggle></Toggle>
+
+            <CustomRange 
+              min={availableFilters.available.prices.min}
+              avg={availableFilters.available.prices.avg}
+              max={availableFilters.available.prices.max}
+              rangeChanged={(r) => filterChanged(props, FilterType.PRICE, r) }
+            />
+
+            <CustomSelect
+              onChange={(r) => filterChanged(props, FilterType.SORT, r) }>
+            </CustomSelect>
+            
+            <LocationFilter
+              locations={availableFilters.available.locations}
+              onChange={(r, s) => filterChanged(props, FilterType.LOCATION, r, s) }>
+            </LocationFilter>
+        </div>
+      </div>
+    ) : null;
+}
+
+function handleHamburgerClick(setFiltersOpened: any, filtersOpened: boolean) {
+  setFiltersOpened(filtersOpened);
+}
+
+function renderNavClasses(filtersOpened: boolean) {
+  const classes = ["col-md-3", "col-lg-3", "col-xl-2", "filters-container"];
+  if (filtersOpened) classes.push("show");
+  return classes.join(" ");
+}
+
+function filterChanged(props: FiltersProps, filterType: FilterType, ...args:any[]) {
+  switch (filterType) {
+    case FilterType.PRICE:
+      props.priceFilterChanged(args[0]);
+      break;
+    case FilterType.SORT:
+      props.sortChanged(args[0]);
+      break;
+    case FilterType.LOCATION:
+      props.locationFilterChanged(args[0], args[1]);
+      break;
+  }
 }
 
 export default FiltersContainer;

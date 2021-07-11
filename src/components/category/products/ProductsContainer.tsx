@@ -11,46 +11,41 @@ interface ProductsProps {
     loadItems(page: number): void
 }
 
-class ProductsContainer extends Component<ProductsProps> {
+function ProductsContainer(props: ProductsProps) {
 
-    constructor(props: ProductsProps) {
-        super(props);
-    }
+    const loader = <div key="loader" className="loader">Loading ...</div>;
 
-    render() {
-        const loader = <div key="loader" className="loader">Loading ...</div>;
+    return (
+        <div className="col-md-9 col-lg-9 col-xl-10 bd-content">
+            <InfiniteScroll
+                className="row"
+                pageStart={0}
+                loadMore={props.loadItems}
+                hasMore={props.hasMoreItems}
+                loader={loader}>
 
-        return (
-            <div className="col-md-9 col-lg-9 col-xl-10 bd-content">
-                <InfiniteScroll
-                    className="row"
-                    pageStart={0}
-                    loadMore={this.props.loadItems.bind(this)}
-                    hasMore={this.props.hasMoreItems}
-                    loader={loader}>
+                {renderProducts(props)}
+            </InfiniteScroll>
+        </div>
+    );
 
-                    {this.renderProducts()}
-                </InfiniteScroll>
-            </div>
-        );
-    }
 
-    renderProducts() {
-        return (
-            this.props
-                .products
-                .map((p: ProductDTO, i: number) =>
-                    <Product
-                        key={i}
-                        name={p.name}
-                        price={p.price}
-                        pictures={p.pictures}
-                        flags={p.flags}
-                        url={p.url}
-                    />
-                )
-        );
-    }
+}
+
+function renderProducts(props: ProductsProps) {
+    return (
+            props.products
+            .map((p: ProductDTO, i: number) =>
+                <Product
+                    key={i}
+                    name={p.name}
+                    price={p.price}
+                    pictures={p.pictures}
+                    flags={p.flags}
+                    url={p.url}
+                />
+            )
+    );
 }
 
 export default ProductsContainer;

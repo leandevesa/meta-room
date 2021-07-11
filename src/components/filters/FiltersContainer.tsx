@@ -7,6 +7,7 @@ import { Filters } from '../../dto/Search/Filters';
 import CustomSelect from './CustomSelect';
 import LocationFilter from './LocationFilter';
 
+
 interface FiltersProps {
   filters?: Filters
   priceFilterChanged(newValue: number): void
@@ -38,7 +39,6 @@ class FiltersContainer extends Component<FiltersProps, any> {
     }
 
     filterChanged(filterType: FilterType, ...args:any[]) {
-      
       switch (filterType) {
         case FilterType.PRICE:
           this.props.priceFilterChanged(args[0]);

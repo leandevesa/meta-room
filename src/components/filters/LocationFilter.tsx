@@ -10,6 +10,7 @@ interface LocationFilterProps {
 interface LocationFilterState {
   statesOptions: Array<any>;
   regionsOptions: Array<any>;
+  regionsIsDisabled: boolean;
 }
 
 class LocationFilter extends Component<LocationFilterProps, LocationFilterState> {
@@ -25,13 +26,13 @@ class LocationFilter extends Component<LocationFilterProps, LocationFilterState>
 
   stateChanged(s: any) {
     const previousStatesApplied = this.statesApplied;
-    this.statesApplied = s.map(function(i: any) { return i.value });
+    this.statesApplied = s.map((i: any) => i.value);
     this.thereAreChanges = this.thereAreChanges || (previousStatesApplied !== this.statesApplied);
   }
 
   regionChanged(s: any) {
     const previousRegionsApplied = this.regionsApplied;
-    this.regionsApplied = s.map(function(i: any) { return i.value });
+    this.regionsApplied = s.map((i: any) => i.value );
     this.thereAreChanges = this.thereAreChanges || (previousRegionsApplied !== this.regionsApplied);
   }
 
@@ -47,6 +48,7 @@ class LocationFilter extends Component<LocationFilterProps, LocationFilterState>
   }
 
   static transformPropsToSelectValues(props: LocationFilterProps) {
+
     const statesOptions = props.locations.map(s => {
       return {
         value: s.id.toString(),
@@ -64,11 +66,14 @@ class LocationFilter extends Component<LocationFilterProps, LocationFilterState>
           }
         })
       }
-    })
+    }).filter(r => r.options.length);
+
+    const regionsIsDisabled = !regionsOptions.length;
 
     return {
       statesOptions,
-      regionsOptions
+      regionsOptions,
+      regionsIsDisabled
     }
   }
 
@@ -89,6 +94,7 @@ class LocationFilter extends Component<LocationFilterProps, LocationFilterState>
         <label>Localidad</label>
         <Select options={this.state.regionsOptions}
                 isMulti
+                isDisabled={this.state.regionsIsDisabled}
                 onChange={this.regionChanged.bind(this)}
                 onMenuClose={this.menuClosed.bind(this)}
                 closeMenuOnSelect={false}

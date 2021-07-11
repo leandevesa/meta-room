@@ -201,7 +201,7 @@ function getAvailableFilters(categoryId, selectedStatesIds) {
 
             const state = f.meta;
 
-            if (selectedStatesIds.length && !selectedStatesIds.includes(state.id)) {
+            if (!selectedStatesIds.includes(state.id)) {
                 state.regions = [];
             }
 
